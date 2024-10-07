@@ -1,5 +1,5 @@
 import React from "react";
-import easyjob from '../../assets/projects/EasyJob.png'
+import easyjob from '../../../public/EasyJob.png';
 import Tilt from 'react-parallax-tilt';
 import abacus from '../../assets/projects/Abacus.jpg';
 import pp from '../../assets/projects/pp.png';
