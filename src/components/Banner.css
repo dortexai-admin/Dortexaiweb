@@ -1,0 +1,80 @@
+.shadow-text {
+    text-shadow: 7px 7px 6px rgb(0 0 0 / 70%);
+}
+
+.hero_container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.hero h3 {
+    font-size: 2.5rem;
+    margin: 0; /* Ensuring no margin */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    max-width: 60%;
+    margin: 0.5rem 0; /* Adding slight spacing */
+}
+
+.hero div {
+    font-size: 2rem;
+    margin: 0.5rem 0; /* Controlled spacing between text blocks */
+}
+
+.typed-text-output {
+    font-size: 2rem;
+    margin-top: 1rem; /* Add some spacing to separate from the above text */
+}
+
+.cursor {
+    font-weight: bold;
+    font-size: 2rem;
+    animation: blink 0.7s step-end infinite;
+}
+.services_btn{
+    width: auto;
+    font-size: 1rem;
+  height: auto;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  text-decoration: none;
+  margin-top: 2rem;
+  font-weight: 600;
+
+}
+.services_btn:hover{
+    /* background: rgb(35, 191, 223); */
+    background: linear-gradient(0deg, rgb(85, 182, 201) 50%, rgba(2,126,251,1) 90%);
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+}
+.hero{
+  /* flex:1; */
+  /* flex-direction: column; */
+}
+Image{
+justify-content:center;
+align-items: center;
+overflow: hidden;
+}
