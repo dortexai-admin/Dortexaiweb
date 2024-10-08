@@ -24,7 +24,12 @@ const ConnectForm = () => {
                         color="primary"
                         startIcon={<WhatsAppIcon />}
                         href="#hire"
-                        sx={{ marginTop: 2, padding: '12px 24px' }}
+                        sx={{
+                            marginTop: 2,
+                            padding: '12px 24px',
+                            backgroundColor: '#0c1274', // Custom color for WhatsApp button
+                            '&:hover': { backgroundColor: '#533aa7' } // Darker shade on hover
+                        }}
                     >
                         WhatsApp
                     </Button>
@@ -139,7 +144,10 @@ const ConnectForm = () => {
                                     variant="contained"
                                     color="primary"
                                     type="submit"
-                                    sx={{ width: '100%' }}
+                                    sx={{ width: '100%',
+                                    backgroundColor: '#0c1274', // Custom color for WhatsApp button
+                                    '&:hover': { backgroundColor: '#533aa7' } 
+                                }}
                                 >
                                     Send Message
                                 </Button>

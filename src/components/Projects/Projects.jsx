@@ -55,7 +55,7 @@ const Projects = () => {
             <Grid container spacing={4}>
                 {projects.map((project, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
-                        <Tilt tiltMaxAngleX={20} tiltMaxAngleY={20} glareEnable={true} glareMaxOpacity={0.8} glareColor="lightblue" glarePosition="all">
+                        <Tilt tiltMaxAngleX={30} tiltMaxAngleY={20} glareEnable={true} glareMaxOpacity={0.8} glareColor="lightblue" glarePosition="all">
                             <Paper 
                                 elevation={3} 
                                 sx={{ 

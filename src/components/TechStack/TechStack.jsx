@@ -122,11 +122,11 @@ const TechCarousel = () => {
           {TechData.slice(index * 14, index * 14 + 14).map((tech, i) => (
             <Tilt
               key={i}
-              tiltMaxAngleX={10}
-              tiltMaxAngleY={10}
+              tiltMaxAngleX={40}
+              tiltMaxAngleY={40}
               glareEnable={true}
-              glareMaxOpacity={0.6}
-              glareColor="lightblue"
+              glareMaxOpacity={0.9}
+              glareColor="blue"
               glarePosition="all"
             >
               <CarouselItem>

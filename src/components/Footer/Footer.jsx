@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid, Typography, Link, IconButton, Divider, List, ListItem } from '@mui/material';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import EmailIcon from '@mui/icons-material/Email';
 import logo from '../../assets/DortexAiWhite.png';
-import location from '../../assets/location.png';
-import email from '../../assets/email.png';
 
 const Footr = () => {
     // Array of important links
@@ -41,7 +41,7 @@ const Footr = () => {
                                 size="small" 
                                 key={index}
                             >
-                            <i className={`fab fa-${url.split('/')[2].split('.')[1]}`} style={{ color: 'white' }}></i>
+                                <i className={`fab fa-${url.split('/')[2].split('.')[1]}`} style={{ color: 'white' }}></i>
 
                             </IconButton>
                         ))}
@@ -85,11 +85,11 @@ const Footr = () => {
                 <Grid item xs={12} md={4}>
                     <Typography variant="h6" fontWeight="bold">Get in Touch</Typography>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '1rem' }}>
-                        <img src={location} alt="location icon" style={{ width: '2rem', marginRight: '0.5rem' }} />
+                        <LocationOnIcon sx={{ color: '#', marginRight: '0.5rem' }} />
                         <Typography variant="body2">Chandigarh Group of College, Landran Mohali Punjab</Typography>
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
-                        <img src={email} alt="email icon" style={{ width: '2rem', marginRight: '0.5rem' }} />
+                        <EmailIcon sx={{ color: '', marginRight: '0.5rem' }} />
                         <Typography variant="body2">info@dortexai.com</Typography>
                     </div>
                 </Grid>
