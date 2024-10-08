@@ -37,7 +37,7 @@ const Banner = () => {
     }, [charIndex, skillIndex, skills]);
 
     return (
-        <Container maxWidth="lg" sx={{ py: 5 }}>
+        <Container maxWidth="lg" sx={{ py: 5,mt:'10rem' }}>
             <Grid container spacing={4} alignItems="center">
                 {/* Left Section */}
                 <Grid item xs={12} md={6}>
@@ -72,7 +72,7 @@ const Banner = () => {
                                 padding: '0.75rem 1.5rem',
                                 fontSize: '1rem',
                                 fontWeight: 600,
-                                backgroundColor: 'primary.main',
+                                backgroundColor: '#0b0b08',
                                 boxShadow: 3,
                                 '&:hover': {
                                     backgroundColor: 'primary.dark',
