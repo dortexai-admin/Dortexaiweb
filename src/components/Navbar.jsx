@@ -80,8 +80,8 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { text: "DortexAI Lab", href: "/" },
     { text: "Home", href: "/" },
+    { text: "DortexAI Lab", href: "/" },
     { text: "About Us", href: "#About" },
     { text: "Services", href: "#", dropdown: true },
     { text: "Internships & Training", href: "#", dropdown: true },
@@ -95,7 +95,6 @@ const Navbar = () => {
     { text: "Web Development", href: "/services/web-development" },
     { text: "Digital Marketing", href: "/services/digital-marketing" },
     { text: "UI/UX Design", href: "/services/ui-ux-design" },
-    { text: "Recruitment Solutions", href: "/services/recruitment-solutions" },
   ];
 
   // Internships & Training Dropdown Options

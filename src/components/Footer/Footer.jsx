@@ -1,72 +1,103 @@
 import React from "react";
+import { Grid, Typography, Link, IconButton, Divider, List, ListItem } from '@mui/material';
 import logo from '../../assets/DortexAiWhite.png';
 import location from '../../assets/location.png';
 import email from '../../assets/email.png';
 
 const Footr = () => {
+    // Array of important links
+    const importantLinks = [
+        { href: "#About", label: "About Us" },
+        { href: "#", label: "Careers" },
+        { href: "#", label: "Our Team" },
+    ];
+
+    // Array of services
+    const services = [
+        { href: "/services/ai-solutions", label: "Innovative AI Solutions" },
+        { href: "/services/application-development", label: "Application Development" },
+        { href: "/services/web-development", label: "Web Development" },
+        { href: "/services/digital-marketing", label: "Digital Marketing" },
+        { href: "/services/ui-ux-design", label: "UI/UX Design" },
+        { href: "/services/recruitment-solutions", label: "Recruitment Solutions" },
+    ];
+
     return (
-        <div className="p-10 flex flex-col">
-            <div className=" basis-[80%] flex flex-row justify-evenly">
-                <div className="basis-[35%] pr-5">
-                    <img src={logo} alt="" className=" w-24" />
-                    <p className=" mt-4 max-w-100">"Share your IDEA and We Will Make It Real”. We ensure the true worth of the valuable time and money you invested in us by delivering the perfect product.</p>
-                    <div className="pt-5">
-                        <a class="inline-block  text-white no-underline p-3 rounded transition-colors duration-300 ease-in-out hover:bg-[#533aa7] me-2 w-10 h-10 text-center" href="https://x.com/dortex_ai" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="inline-block ] text-white no-underline p-3 rounded transition-colors duration-300 ease-in-out hover:bg-[#533aa7] me-2 w-10 h-10 justify-center text-center" href="https://www.facebook.com/profile.php?id=61561315643620" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class="inline-block  text-white no-underline p-3 rounded transition-colors duration-300 ease-in-out hover:bg-[#533aa7] me-2 w-10 h-10 text-center" href="https://www.linkedin.com/company/dortex-ai/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="inline-block  text-white no-underline p-3 rounded transition-colors duration-300 ease-in-out hover:bg-[#533aa7] me-2 w-10 h-10 text-center" href="https://www.instagram.com/dortex_ai/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div className=" basis-[17.5%]">
-                    <h3 className=" text-xl font-bold">Important Links</h3>
-                    <div className=" flex flex-col mt-6 p-2 gap-2">
-                        <a href="#About">About Us</a>
-                        <a href="">Careers</a>
-                        {/* <a href="">Open Positions</a> */}
-                        <a href="">Our Team</a>
-                    </div>
+        <div style={{ padding: '2rem' }}>
+            <Grid container spacing={4}>
+                <Grid item xs={12} md={4}>
+                    <img src={logo} alt="Dortex AI Logo" style={{ width: '6rem' }} />
+                    <Typography variant="body2" style={{ marginTop: '1rem' }}>
+                        "Share your IDEA and We Will Make It Real.” We ensure the true worth of the valuable time and money you invested in us by delivering the perfect product.
+                    </Typography>
+                    <div style={{ paddingTop: '1.5rem' }}>
+                        {["https://x.com/dortex_ai", "https://www.facebook.com/profile.php?id=61561315643620", 
+                        "https://www.linkedin.com/company/dortex-ai/", "https://www.instagram.com/dortex_ai/?hl=en"].map((url, index) => (
+                            <IconButton 
+                                component={Link} 
+                                href={url} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                size="small" 
+                                key={index}
+                            >
+                            <i className={`fab fa-${url.split('/')[2].split('.')[1]}`} style={{ color: 'white' }}></i>
 
-                </div>
-                <div className="basis-[17.5%]">
-                    <h3 className="text-xl font-bold">Services</h3>
-                    <ul className="flex flex-col mt-6 p-2 gap-2 list-disc">
-                        <li>
-                            <a href="/services/ai-solutions">Innovative AI Solutions</a>
-                        </li>
-                        <li>
-                            <a href="/services/application-development">Application Development</a>
-                        </li>
-                        <li>
-                            <a href="/services/web-development">Web Development</a>
-                        </li>
-                        <li>
-                            <a href="/services/digital-marketing">Digital Marketing</a>
-                        </li>
-                        <li>
-                            <a href="/services/ui-ux-design">UI/UX Design</a>
-                        </li>
-                        <li>
-                            <a href="/services/recruitment-solutions">Recruitment Solutions</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="basis-[30%]">
-                    <h3 className="text-xl font-bold">Get in Touch</h3>
-                    <div className="flex p-1 mt-4">
-                        <img src={location} alt="" className="w-7 h-7 p-1" />
-                        <p className="p-1">Chandigarh Group of College, Landran Mohali Punjab</p>
+                            </IconButton>
+                        ))}
                     </div>
-                    <div className="flex p-1">
-                        <img src={email} alt="" className="w-7 h7 p-1" />
-                        <p className="p-1">info@dortexai.com</p>
+                </Grid>
+                <Grid item xs={6} md={2}>
+                    <Typography variant="h6" fontWeight="bold">Important Links</Typography>
+                    <div style={{ marginTop: '1rem' }}>
+                        {importantLinks.map((link, index) => (
+                            <Link 
+                                key={index} 
+                                href={link.href} 
+                                color="inherit" 
+                                underline="none" 
+                                display="block" 
+                                sx={{ marginBottom: '0.5rem' }}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
                     </div>
-                </div>
-            </div>
-            <hr className='mt-2' />
-            <div className=" basis-[20%] pt-12 ">
-                <p className="font-semibold">Copyright © 2024 DortexAI Pvt Ltd, All Rights Reserved.</p>
-            </div>
+                </Grid>
+                <Grid item xs={6} md={2}>
+                    <Typography variant="h6" fontWeight="bold">Services</Typography>
+                    <List style={{ marginTop: '1rem', paddingLeft: '0' }}>
+                        {services.map((service, index) => (
+                            <ListItem key={index} style={{ padding: '0', margin: '0' }}>
+                                <Link 
+                                    href={service.href} 
+                                    color="inherit" 
+                                    underline="none" 
+                                    style={{ flexGrow: 1 }}
+                                    sx={{ marginBottom: '0.5rem' }}
+                                >
+                                    {service.label}
+                                </Link>
+                            </ListItem>
+                        ))}
+                    </List>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <Typography variant="h6" fontWeight="bold">Get in Touch</Typography>
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '1rem' }}>
+                        <img src={location} alt="location icon" style={{ width: '2rem', marginRight: '0.5rem' }} />
+                        <Typography variant="body2">Chandigarh Group of College, Landran Mohali Punjab</Typography>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
+                        <img src={email} alt="email icon" style={{ width: '2rem', marginRight: '0.5rem' }} />
+                        <Typography variant="body2">info@dortexai.com</Typography>
+                    </div>
+                </Grid>
+            </Grid>
+            <Divider style={{ margin: '2rem 0', backgroundColor: 'white' }} />
+            <Typography variant="body2" align="center" fontWeight="medium">
+                Copyright © 2024 DortexAI Pvt Ltd, All Rights Reserved.
+            </Typography>
         </div>
     );
 }
