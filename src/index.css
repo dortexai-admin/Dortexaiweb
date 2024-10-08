@@ -31,7 +31,7 @@ main{
 background:black;
 background: -webkit-linear-gradient(to right, #232526, #414345);
 background-size: cover;
-background-image: url('./assets/cool-wave.png');
+background-image: url('./assets/video1.gif');
 display: flex;
 justify-content: center;
 } */
@@ -52,9 +52,9 @@ justify-content: center;
     width:100vw;
     top: 0;
     left: 0;
-    object-fit:cover; /* Ensures the video covers the whole area */
-    z-index: -1; /* Ensures video stays behind other content */
-}
+    object-fit:cover; /* Ensures the v ideo covers the whole area */
+    /* z-index: -1; Ensures video stays behind other content */
+} 
 
 .head-cont {
     z-index: 1; /* Ensures content appears on top of the video */
@@ -92,15 +92,18 @@ section{
     display: flex;
 }
 
+
 section:nth-child(even){
-    background-color:black;
+    background-color:'#f5fdfc';
 }
+
 section.Tech{
     display: flex;
     justify-content: center;
     height: auto;
     width: auto;
     flex-direction:row;
+    color: #12141d;
 }
 
 .services{
@@ -128,14 +131,13 @@ section.Contact-frm{
     flex-direction: column;
 
 }
-section.Contact-frm *{
-
-}
 
 footer{
     background-color:black;
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
+
 }
 footer *{
     /* outline: 1px solid red; */

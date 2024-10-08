@@ -48,7 +48,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <Box sx={{ padding: '2rem', textAlign: 'center' }}>
+        <Box sx={{ padding: '2rem', textAlign: 'center',color:'#12141d',paddingInline:'5rem' }}>
             <Typography variant="h4" component="h2" sx={{ marginBottom: '2rem', fontWeight: 'bold' }}>
                 Our Projects
             </Typography>
@@ -83,7 +83,7 @@ const Projects = () => {
                                     </Typography>
                                     <Typography 
                                         variant="body2" 
-                                        color="error.main" 
+                                        color="blue" 
                                         sx={{ marginTop: '1rem', cursor: 'pointer' }} 
                                         component="a"
                                         href={project.link}

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Tilt from "react-parallax-tilt";
 import { styled } from "@mui/system";
 import Carousel from "react-material-ui-carousel"; // Import MUI Carousel
@@ -65,7 +65,6 @@ const TechData = [
   { name: "AI", url: ai },
   { name: "ExpressJS", url: express },
   { name: "Apple", url: apple },
-  { name: "Android", url: android },
 ];
 
 // Styled component for tech icons
@@ -79,7 +78,7 @@ const TechIconImage = styled("img")({
 
 // Main container styling
 const TechContainer = styled(Box)({
-  margin: "10px",
+  marginTop:'2rem',
   display: "flex",
   justifyContent: "center",
   flexDirection: "column",
@@ -96,13 +95,16 @@ const CarouselItem = styled(Box)({
   textAlign: "center",
 });
 
-// Tech card grid layout
-const TechGridWrapper = styled(Grid)({
+// Flex container to arrange icons in a single line with wrapping
+const TechIconsWrapper = styled(Box)({
   display: "flex",
+  flexWrap: "wrap",
   justifyContent: "center",
+  gap: "1rem",
+  width: "100%",
 });
 
-// Carousel Section component
+// Carousel Section component with a flexible layout
 const TechCarousel = () => {
   return (
     <Carousel
@@ -111,32 +113,31 @@ const TechCarousel = () => {
       timeout={500}
       indicators={false}
       navButtonsAlwaysVisible={true}
-      interval={3000}
+      interval={2000}
       cycleNavigation={true} // Enable looping
     >
-      {/* Group tech data into sets of 4 per slide */}
-      {Array.from({ length: Math.ceil(TechData.length / 4) }, (_, index) => (
-        <TechGridWrapper container spacing={2} key={index}>
-          {TechData.slice(index * 4, index * 4 + 4).map((tech, i) => (
-            <Grid item xs={12} sm={6} md={3} key={i}>
-              <Tilt
-                tiltMaxAngleX={10}
-                tiltMaxAngleY={10}
-                glareEnable={true}
-                glareMaxOpacity={0.6}
-                glareColor="lightblue"
-                glarePosition="all"
-              >
-                <CarouselItem>
-                  <TechIconImage src={tech.url} alt={tech.name} />
-                  <Typography variant="h6" sx={{ mt: 1 }}>
-                    {tech.name}
-                  </Typography>
-                </CarouselItem>
-              </Tilt>
-            </Grid>
+      {/* Split the data into slides */}
+      {Array.from({ length: Math.ceil(TechData.length / 14) }, (_, index) => (
+        <TechIconsWrapper key={index}>
+          {TechData.slice(index * 14, index * 14 + 14).map((tech, i) => (
+            <Tilt
+              key={i}
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
+              glareEnable={true}
+              glareMaxOpacity={0.6}
+              glareColor="lightblue"
+              glarePosition="all"
+            >
+              <CarouselItem>
+                <TechIconImage src={tech.url} alt={tech.name} />
+                <Typography variant="h6" sx={{ mt: 1 }}>
+                  {tech.name}
+                </Typography>
+              </CarouselItem>
+            </Tilt>
           ))}
-        </TechGridWrapper>
+        </TechIconsWrapper>
       ))}
     </Carousel>
   );
@@ -145,9 +146,9 @@ const TechCarousel = () => {
 // Main Tech component with description and carousel
 const Tech = () => {
   return (
-    <TechContainer className="tech-container p-5">
+    <TechContainer className="tech-container p-5 px-16">
       {/* Description Section */}
-      <Box className="tech-discription" sx={{ display: "flex", mb: 4 }}>
+      <Box className="tech-description" sx={{ display: "flex", mb: 4 }}>
         <Box sx={{ flex: 1.1 }}>
           <Typography variant="h1" sx={{ fontSize: "3rem", fontWeight: 700 }}>
             We Provide IT solutions that perform.
@@ -160,8 +161,8 @@ const Tech = () => {
             reliable services to our clients.
           </Typography>
         </Box>
-        <Box className="empty" sx={{ flex: 1, textAlign: "right" }}>
-          <img src={services} alt="Services" style={{ height: "22rem" }} />
+        <Box className="empty" sx={{ flex: 1}}>
+          <img src={services} alt="Services" style={{ height: "20rem",paddingLeft:'13rem' }} />
         </Box>
       </Box>
 

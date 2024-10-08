@@ -13,7 +13,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const ConnectForm = () => {
     return (
-        <Box className="connect-form-container" sx={{ padding: 4, backgroundColor: '#f9f9f9', borderRadius: 2, boxShadow: 3 }}>
+        <Box className="connect-form-container" sx={{ padding: 4, backgroundColor: '#f9f9f9', borderRadius: 2, boxShadow: 10 }}>
             <Grid container spacing={4}>
                 <Grid item xs={12} md={6}>
                     <Typography variant="h4" fontWeight="bold" color="textPrimary">

@@ -37,7 +37,7 @@ const Banner = () => {
     }, [charIndex, skillIndex, skills]);
 
     return (
-        <Container maxWidth="lg" sx={{ py: 5,mt:'10rem' }}>
+        <Container maxWidth="lg" sx={{ py: 5,mt:'8rem' }}>
             <Grid container spacing={4} alignItems="center">
                 {/* Left Section */}
                 <Grid item xs={12} md={6}>
@@ -87,9 +87,9 @@ const Banner = () => {
 
                 {/* Right Section with Image */}
                 <Grid item xs={12} md={6}>
-                    <Box display="flex" justifyContent="center" alignItems="center" sx={{ overflow: 'hidden' }}>
+                    {/* <Box display="flex" justifyContent="center" alignItems="center" sx={{ overflow: 'hidden' }}>
                         <img src={robot} alt="robot" style={{ maxWidth: '100%', height: 'auto' }} />
-                    </Box>
+                    </Box> */}
                 </Grid>
             </Grid>
 

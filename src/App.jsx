@@ -26,32 +26,22 @@ const App = () => {
         </header>
       <main>
         <section className="About" id="About">
-          <LazyLoad>
             <About />
-          </LazyLoad>
         </section>
         <section className="Tech">
-          <LazyLoad>
           <Tech />
-          </LazyLoad>
         </section>
         <section className="services" id="Services">
-          <LazyLoad>
-          <Services />
-          </LazyLoad>
+          <Services /> 
         </section>
         <section id="Projects">
          <Projects/>
         </section>
         <section id="Contact">
-          <LazyLoad>
           <Location />
-          </LazyLoad>
         </section>
         <section className="Contact-frm">
-          <LazyLoad>
           <ConnectForm />
-          </LazyLoad>
         </section>
       </main>
       <footer>
