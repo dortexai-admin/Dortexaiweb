@@ -88,7 +88,7 @@ const Banner = () => {
                 {/* Right Section with Image */}
                 <Grid item xs={12} md={6}>
                     <Box display="flex" justifyContent="center" alignItems="center" sx={{ overflow: 'hidden' }}>
-                        <img src={robot} alt="robot" style={{ maxWidth: '10%', height: 'auto' }} />
+                        <img src={robot} alt="robot" style={{ maxWidth: '100%', height: 'auto' }} />
                     </Box>
                 </Grid>
             </Grid>
