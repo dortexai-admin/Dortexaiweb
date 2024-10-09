@@ -16,69 +16,23 @@ import { useTheme, styled } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; // Importing arrow icon for dropdowns
-import logo from "../assets/DortexAiWhite.png";
+import logo from "../../../assets/DortexAiWhite.png";
 
 
-const Navbar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null); // State for Services dropdown
-  const [internshipAnchorEl, setInternshipAnchorEl] = useState(null); // State for Internships dropdown
-
+const LabNav = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const toggleDrawer = (open) => () => {
-    setDrawerOpen(open);
-  };
-
-  // Handling the "Services" dropdown
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  // Handling the "Internships & Training" dropdown
-  const handleInternshipMenuOpen = (event) => {
-    setInternshipAnchorEl(event.currentTarget);
-  };
-
-  const handleInternshipMenuClose = () => {
-    setInternshipAnchorEl(null);
-  };
-
   const menuItems = [
-    { text: "Home", href: "/" },
-    { text: "DortexAI Lab", href: "/dortexailab" },
-    { text: "About Us", href: "#About" },
-    { text: "Services", href: "#", dropdown: true },
-    { text: "Internships & Training", href: "#", dropdown: true },
-    { text: "Contact Us", href: "#Contact" },
+    { text: "Home", href: "/dortexailab" },
+    { text: "Training & Development", href: "" },
+    { text: "Our Services", href: "" },
+    { text: "Models", href: "" },
+    { text: "About Us", href: "" },
+    { text: "Careers", href: "" },
+    { text: "Contact Us", href: "" },
   ];
-
-  // Services Dropdown Options
-  const serviceOptions = [
-    { text: "Innovative AI Solutions", href: "/services/ai-solutions" },
-    { text: "Application Development", href: "/services/application-development" },
-    { text: "Web Development", href: "/services/web-development" },
-    { text: "Digital Marketing", href: "/services/digital-marketing" },
-    { text: "UI/UX Design", href: "/services/ui-ux-design" },
-  ];
-
-  // Internships & Training Dropdown Options
-  const internshipOptions = [
-    { text: "Web Development", href: "/internships/web-development" },
-    { text: "App Development", href: "/internships/app-development" },
-    { text: "Backend Development", href: "/internships/backend-development" },
-    { text: "Full Stack Development", href: "/internships/full-stack-development" },
-    { text: "UI/UX Development", href: "/internships/ui-ux-development" },
-    { text: "Cloud Development", href: "/internships/cloud-development" },
-    { text: "DevOps", href: "/internships/devops" },
-    { text: "Digital Marketing", href: "/internships/digital-marketing" },
-  ];
-
+  
   const MenuLink = styled(MuiLink)(({ theme }) => ({
     color: "white",
     textDecoration: "none",
@@ -138,7 +92,7 @@ const Navbar = () => {
             display: { xs: "none", md: "flex" },
             flexGrow: 1,
             justifyContent: "right",
-            gap: 2,
+            gap: 5,
             mr: 5,
           }}
         >
@@ -267,4 +221,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default LabNav;
