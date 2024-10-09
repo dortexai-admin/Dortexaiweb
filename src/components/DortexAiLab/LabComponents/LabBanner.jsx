@@ -6,10 +6,12 @@ const LabBanner = () => {
   return (
     <Container
       maxWidth={false} // This allows the container to take full width
+      height={'vh'}
       sx={{
         py: 5,
         backgroundColor: 'lightblue', // Change background color to light blue
         width: '100%', // Ensure full width
+        minHeight:'100vh',
         position: 'relative', // This can help with positioning child elements if needed
       }}
     >
@@ -51,7 +53,7 @@ const LabBanner = () => {
         {/* Right Section with Image */}
         <Grid item xs={12} md={6}>
           <Box display="flex" justifyContent="flex-end" sx={{ overflow: 'hidden' }}>
-            <img src={dortexlogo} alt="robot" style={{ maxWidth: '80rem', height: 'auto' }} />
+            <img src={dortexlogo} alt="robot" style={{ Width: '80rem', height: 'auto' }} />
           </Box>
         </Grid>
       </Grid>
