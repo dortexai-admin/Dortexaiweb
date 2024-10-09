@@ -5,6 +5,7 @@ import LabBanner from './LabComponents/LabBanner'
 import { Box } from '@mui/material';
 import LabFootr from './LabComponents/LabFooter';
 import TrainingDevelopmentCard from './LabComponents/TrainingDevelopment';
+import LabServices from './LabComponents/LabServices';
 
 function DortexAiLab() {
   return (
@@ -12,6 +13,7 @@ function DortexAiLab() {
     <LabNav />
     <LabBanner />
     <TrainingDevelopmentCard/>
+    <LabServices/>
     <LabFootr/>
   </Box>
   )
