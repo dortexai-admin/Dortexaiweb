@@ -2,27 +2,24 @@ import React from "react";
 import { Box, Typography, Grid, Paper, Container } from "@mui/material";
 import Tilt from 'react-parallax-tilt';
 import hcareai from '../../../../public/HealthCareAi.png';
-import abacus from '../../../assets/projects/Abacus.jpg';
-import pp from '../../../assets/projects/PpBlack.png';
+import aitutor from '../../../../public/aitutor.png';
+import business from '../../../../public/business.png';
 
 const Labproject = [
     {
         image: hcareai,
         title: "Health Care AI",
-        description: "Easy Job is an AI-powered app that helps job seekers of all backgrounds find employment including unskilled, freshers and experienced candidates at one platform.",
-        link: "/android"
+        description: "Our AI-powered healthcare platform analyzes uploaded prescriptions and generates personalized video guidance. The virtual doctor explains medication, required tests, precautions, and follow-up visits in detail. Available in multiple languages, including Hindi and Punjabi...",
     },
     {
-        image: abacus,
-        title: "ABACUS CLOUD",
-        description: "Query Mate is your intelligent chatbot companion that seamlessly connects businesses with their customers by providing instant solutions to queries. With Query Mate, you can effortlessly inquire about any aspect of a company, from product details and support inquiries to general information...",
-        link: "/react"
+        image: aitutor,
+        title: "AI Tutor",
+        description: "AI Tutor is your intelligent chatbot companion that seamlessly connects businesses with their customers by providing instant solutions to queries. With Query Mate, you can effortlessly inquire about any aspect of a company, from product details and support inquiries to general information...",
     },
     {
-        image: pp,
-        title: "Perfect Propertys",
-        description: "Perfect Propertys is a real estate platform designed to connect builders, brokers, and clients looking for properties, PG (Paying Guest accommodations), and rentals...",
-        link: "/laravel"
+        image: business,
+        title: "Business Solutions",
+        description: "The Business Solutions project focuses on providing tailored AI-driven solutions to enhance business growth. By leveraging advanced AI models, we help companies streamline operations, optimize decision-making, and unlock new opportunities. Our solutions...",
     },
 ];
 
@@ -66,15 +63,6 @@ const LabProjects = () => {
                                     </Typography>
                                     <Typography variant="body2" color="text.secondary" sx={{ marginTop: '0.5rem' }}>
                                         {project.description}
-                                    </Typography>
-                                    <Typography 
-                                        variant="body2" 
-                                        color="blue" 
-                                        sx={{ marginTop: '1rem', cursor: 'pointer' }} 
-                                        component="a"
-                                        href={project.link}
-                                    >
-                                        Show More ➔
                                     </Typography>
                                 </Box>
                             </Paper>
