@@ -60,7 +60,7 @@ const About = () => {
   }, []);
 
   return (
-    <StyledBox id="about">
+    <StyledBox>
       <Box sx={{ maxWidth: "1400px", width: "100%" }}>
         <Grid container spacing={5}>
           {/* Left Section */}

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Grid, Box, Typography, Card, CardContent, CardActionArea, IconButton } from '@mui/material';
 import { CheckBox, Chat, BarChart, Memory } from '@mui/icons-material';
+import MyButtonComponent from './CusButton';
 
-const services = [
+const Labservices = [
   {
     title: 'Fine Tuning',
     description: 'Customizing pre-trained models to suit specific tasks and datasets for improved performance.',
@@ -27,7 +28,7 @@ const services = [
 
 const LabServices = () => {
   return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
+    <Container maxWidth="lg" sx={{ py: 8, backgroundColor: 'white' }}>
       <Typography variant="h3" align="center" gutterBottom sx={{ fontWeight: 'bold', color: 'black', mb: 5 }}>
         Our Services
       </Typography>
@@ -37,16 +38,18 @@ const LabServices = () => {
       </Typography>
 
       <Grid container spacing={4}>
-        {services.map((service, index) => (
+        {Labservices.map((service, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}>
             <Card
               sx={{
-                boxShadow: '0 2px 48px 0 rgba(0, 0, 0, 0.06)',
+                boxShadow: '10px 10px 12px rgba(0, 0, 0, 0.3)', // Adding a soft shadow
                 transition: 'transform 0.3s',
                 '&:hover': {
-                  transform: 'translateY(-10px)',
+                  transform: 'translateY(-10px)', // Hover effect
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)', // Stronger shadow on hover
                 },
                 position: 'relative',
+                backgroundColor: 'white',
               }}
             >
               <CardActionArea>
@@ -56,18 +59,16 @@ const LabServices = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
                     p: 4,
-                    '&:hover .service-icon': {
-                      color: 'transparent',
-                    },
                   }}
                 >
                   <IconButton
-                    className="service-icon"
                     sx={{
                       bgcolor: 'linear-gradient(135deg, #80d0c7 0%, #13547a 100%)',
                       color: '#13547a',
                       fontSize: '2rem',
                       mb: 2,
+                      borderRadius: '50%',
+                      p: 1.5,
                     }}
                   >
                     {service.icon}
