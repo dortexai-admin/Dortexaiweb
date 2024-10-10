@@ -1,13 +1,13 @@
 import React from 'react';
-import { Container, Grid, Card, Typography, CardMedia, Box } from '@mui/material';
+import { Container, Grid, Card, Typography, CardMedia } from '@mui/material';
 import OpenAI from '../../../../public/Openai.png';  // Replace with the correct paths
-import Adept from '../../../assets/DortexAi.png';
-import Meta from '../../../assets/DortexAi.png';
+import Gemini from '../../../../public/Gemini.png';
+import Vision from '../../../../public/vision.png';
 
 const Modal = [
   { name: 'OpenAI', logo: OpenAI },
-  { name: 'Adept', logo: Adept },
-  { name: 'Meta', logo: Meta },
+  { name: 'Geminii', logo: Gemini },
+  { name: 'Vision', logo: Vision },
 ];
 
 const LabModals = () => {
@@ -26,7 +26,7 @@ const LabModals = () => {
           <Grid item xs={12} sm={6} md={4} lg={2.4} key={index}>
             <Card
               sx={{
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',  // Shadow for card
+                boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.5)',  // Shadow for card
                 transition: 'transform 0.3s',
                 '&:hover': {
                   transform: 'scale(1.05)',  // Scale effect on hover
@@ -38,13 +38,18 @@ const LabModals = () => {
                 p: 2,
                 borderRadius: 2,
                 backgroundColor: 'white',
+                height: '150px',  // Fixed height for uniformity
               }}
             >
               <CardMedia
                 component="img"
                 src={partner.logo}
                 alt={partner.name}
-                sx={{ maxWidth: '100px', height: 'auto',objectFit:'fill' }}  // Adjust logo size
+                sx={{ 
+                  width: '100px',  // Fixed width for all images
+                  height: 'auto', // Fixed height for all images
+                  objectFit: 'fill',  // Stretch to fit the container without preserving aspect ratio
+                }}
               />
             </Card>
           </Grid>

@@ -1,21 +1,21 @@
 import React from "react";
 import { Box, Typography, Grid, Paper, Container } from "@mui/material";
 import Tilt from 'react-parallax-tilt';
-import easyjob from '../../../../public/EasyJob.png';
+import hcareai from '../../../../public/HealthCareAi.png';
 import abacus from '../../../assets/projects/Abacus.jpg';
 import pp from '../../../assets/projects/PpBlack.png';
 
 const Labproject = [
     {
-        image: easyjob,
-        title: "EASY JOB",
+        image: hcareai,
+        title: "Health Care AI",
         description: "Easy Job is an AI-powered app that helps job seekers of all backgrounds find employment including unskilled, freshers and experienced candidates at one platform.",
         link: "/android"
     },
     {
         image: abacus,
         title: "ABACUS CLOUD",
-        description: "Abacus Cloud a storage platform where users can store their data files and many more things with premium features...",
+        description: "Query Mate is your intelligent chatbot companion that seamlessly connects businesses with their customers by providing instant solutions to queries. With Query Mate, you can effortlessly inquire about any aspect of a company, from product details and support inquiries to general information...",
         link: "/react"
     },
     {
