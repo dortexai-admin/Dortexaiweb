@@ -131,7 +131,7 @@ const TechCarousel = () => {
             >
               <CarouselItem>
                 <TechIconImage src={tech.url} alt={tech.name} />
-                <Typography variant="h6" sx={{ mt: 1 }}>
+                <Typography variant="h6" sx={{ mt: 1,color:'#12141d'}}>
                   {tech.name}
                 </Typography>
               </CarouselItem>
@@ -146,14 +146,14 @@ const TechCarousel = () => {
 // Main Tech component with description and carousel
 const Tech = () => {
   return (
-    <TechContainer className="tech-container p-5 px-16">
+    <TechContainer className="tech-container p-5 px-0 md:px-16">
       {/* Description Section */}
-      <Box className="tech-description" sx={{ display: "flex", mb: 4 }}>
+      <Box className="tech-description flex flex-col md:flex-row mb-4">
         <Box sx={{ flex: 1.1 }}>
-          <Typography variant="h1" sx={{ fontSize: "3rem", fontWeight: 700 }}>
+          <Typography variant="h1" sx={{ fontSize: "3rem", fontWeight: 700, color:'#12141d' }}>
             We Provide IT solutions that perform.
           </Typography>
-          <Typography variant="body1" sx={{ fontSize: "1.1rem", mt: 2 }}>
+          <Typography variant="body1" sx={{ fontSize: "1.1rem", mt: 2,color:'#12141d' }}>
             We believe that the right blend of these technologies empowers us to
             deliver top-notch solutions that exceed expectations. Our
             commitment to staying up-to-date with the latest technological
@@ -162,7 +162,7 @@ const Tech = () => {
           </Typography>
         </Box>
         <Box className="empty" sx={{ flex: 1}}>
-          <img src={services} alt="Services" style={{ height: "20rem",paddingLeft:'13rem' }} />
+          <img src={services} alt="Services" className="h-auto w-full pt-6 md:w-auto md:h-[20rem] md:pl-[13rem]" />
         </Box>
       </Box>
 
@@ -170,7 +170,7 @@ const Tech = () => {
       <Box className="tech-icons" sx={{ mt: 4 }}>
         <Typography
           variant="h1"
-          sx={{ fontSize: "2rem", fontWeight: 600, textAlign: "center", mb: 3 }}
+          sx={{ fontSize: "2rem", fontWeight: 600, textAlign: "center", mb: 3,color:'#12141d' }}
         >
           Our Technologies
         </Typography>

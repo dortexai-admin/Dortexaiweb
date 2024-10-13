@@ -47,7 +47,7 @@ const App = () => {
                 <section id="Contact">
                   <Location />
                 </section>
-                <section className="Contact-frm">
+                <section className="Contact-frm p-5">
                   <ConnectForm />
                 </section>
               </main>

@@ -3,6 +3,7 @@ import { Box, Typography, Button, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import aboutImage1 from "../../assets/about-1.jpg";
 import aboutImage2 from "../../assets/about-2.jpg";
+import './About.css'
 
 // Styled components using MUI's styled
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -10,18 +11,28 @@ const StyledBox = styled(Box)(({ theme }) => ({
   color: "black",
   display: "flex",
   justifyContent: "center",
+  [theme.breakpoints.up('sm')]: {
+    padding: theme.spacing(3, 0), // Adjust padding for mobile
+  },
 }));
 
 const YearsInfo = styled(Box)(({ theme }) => ({
   textAlign: "center",
   marginRight: theme.spacing(2),
+  [theme.breakpoints.down('sm')]: {
+    marginRight: 0, // Reset margin for mobile
+    marginBottom: theme.spacing(2), // Add margin below in mobile view
+  },
 }));
 
 const LargeText = styled(Typography)(({ theme }) => ({
-  fontSize: "10rem",
+  fontSize: "10rem", // Use rem for responsiveness
   fontWeight: "bold",
   margin: 0,
   color: "#12141d",
+  [theme.breakpoints.down('sm')]: {
+    fontSize: "5rem", // Smaller font for mobile
+  },
 }));
 
 const CustomButton = styled(Button)(({ theme }) => ({
@@ -31,6 +42,10 @@ const CustomButton = styled(Button)(({ theme }) => ({
   fontWeight: 600,
   "&:hover": {
     backgroundColor: "#533aa7",
+  },
+  [theme.breakpoints.down('sm')]: {
+    padding: theme.spacing(1.5, 4), // Adjust button padding for mobile
+    width: "100%", // Full width on mobile
   },
 }));
 
@@ -42,7 +57,6 @@ const About = () => {
     let start = 0;
     const duration = 2000;
     const increment = target / (duration / 16);
-
     const counter = setInterval(() => {
       start += increment;
       if (start >= target) {
@@ -61,34 +75,41 @@ const About = () => {
 
   return (
     <StyledBox>
-      <Box sx={{ maxWidth: "1400px", width: "100%" }}>
-        <Grid container spacing={5}>
+      <Box sx={{ maxWidth: "87.5rem", width: "100%" }}>
+        <Grid container spacing={5} direction={{ xs: "column", md: "row" }}>
           {/* Left Section */}
           <Grid item xs={12} md={6}>
-            <Box sx={{ display: "flex", alignItems: "center", mb: 5 }}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                mb: 5,
+                flexDirection: { xs: "column", md: "row" }, // Stack items vertically on mobile
+              }}
+            >
               <YearsInfo>
                 <LargeText>01</LargeText>
-                <Typography variant="h5" sx={{ letterSpacing: "1rem", fontWeight: 600, color: "#12141d" }}>
+                <Typography variant="h5" sx={{ letterSpacing: "0.625rem", fontWeight: 600, color: "#12141d" }}>
                   Years
                 </Typography>
               </YearsInfo>
-              <Typography variant="h3" sx={{ fontSize: "28px", fontWeight: 500, color: "#12141d" }}>
+              <Typography variant="h3" sx={{ fontSize: { xs: "1.5rem", md: "1.75rem" }, fontWeight: 500, color: "#12141d", textAlign: { xs: "center", md: "left" } }}>
                 years of building bespoke software, transforming businesses across industries.
               </Typography>
             </Box>
             <Box>
-              <Typography sx={{ color: "#5a5a5a", mb: 4 }}>
+              <Typography sx={{ color: "#5a5a5a", mb: 4, textAlign: { xs: "center", md: "left" } }}>
                 We offer a wide range of services meeting your specific business needs.
               </Typography>
-              <Typography sx={{ display: "flex", alignItems: "center", mb: 3 }}>
+              <Typography sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" } }}>
                 <i className="far fa-check-circle text-primary me-3" />
                 Affordable Prices
               </Typography>
-              <Typography sx={{ display: "flex", alignItems: "center", mb: 3 }}>
+              <Typography sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" } }}>
                 <i className="far fa-check-circle text-primary me-3" />
                 High Quality Product
               </Typography>
-              <Typography sx={{ display: "flex", alignItems: "center", mb: 3 }}>
+              <Typography sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" } }}>
                 <i className="far fa-check-circle text-primary me-3" />
                 On Time Project Delivery
               </Typography>
@@ -100,32 +121,45 @@ const About = () => {
           <Grid item xs={12} md={6}>
             <Grid container spacing={3} sx={{ mb: 4 }}>
               <Grid item xs={6}>
-                <Box component="img" src={aboutImage1} alt="About 1" sx={{ width: "100%", height: "19rem", objectFit: "contain", borderRadius: "1.5rem" }} />
+                <Box component="img" src={aboutImage1} alt="About 1" sx={{
+                  width: "100%",
+                  height: { xs: "10rem", md: "19rem" },
+                  objectFit: "contain",
+                  borderRadius: "1.5rem"
+                }} />
               </Grid>
               <Grid item xs={6}>
-                <Box component="img" src={aboutImage2} alt="About 2" sx={{ width: "100%", height: "19rem", objectFit: "contain", borderRadius: "1.5rem" }} />
+                <Box component="img" src={aboutImage2} alt="About 2" sx={{
+                  width: "100%",
+                  height: { xs: "10rem", md: "19rem" },
+                  objectFit: "contain",
+                  borderRadius: "1.5rem"
+                }} />
               </Grid>
             </Grid>
             <Box>
-              <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
-                <Typography variant="h5" sx={{ borderRight: "2px solid #dee2e6", pr: 3, mr: 3, fontWeight: 600, color: "#12141d" }}>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" }, flexDirection: { xs: "column", md: "row" } }}>
+                <Typography variant="h5" sx={{ borderRight: { md: "2px solid #dee2e6" }, pr: { md: 3 }, mr: { md: 3 }, fontWeight: 600, color: "#12141d", mb: { xs: 2, md: 0 }, textAlign: { xs: "center", md: "left" } }}>
                   Happy Clients
                 </Typography>
-                <Typography variant="h2" sx={{ color: "#011255", fontWeight: "bold", fontSize: "32px" }}>{clients}</Typography>
-                <Typography variant="h2" sx={{ fontSize: "32px", ml: 1 }}>+</Typography>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography variant="h2" sx={{ color: "#011255", fontWeight: "bold", fontSize: { xs: "1.75rem", md: "2rem" } }}>{clients}</Typography>
+                  <Typography variant="h2" sx={{ fontSize: { xs: "1.75rem", md: "2rem" }, ml: 1 }}>+</Typography>
+                </Box>
               </Box>
-              <Typography sx={{ color: "#5A5A5A", mb: 4 }}>
+              <Typography sx={{ color: "#5A5A5A", mb: 4, textAlign: { xs: "center", md: "left" } }}>
                 With our vast experience of dealing with clients in various domains and industries, we are confident to deliver the best possible development services to businesses.
               </Typography>
-
-              <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
-                <Typography variant="h5" sx={{ borderRight: "2px solid #dee2e6", pr: 3, mr: 3, fontWeight: 600, color: "#12141d" }}>
+              <Box sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" }, flexDirection: { xs: "column", md: "row" } }}>
+                <Typography variant="h5" sx={{ borderRight: { md: "2px solid #dee2e6" }, pr: { md: 3 }, mr: { md: 3 }, fontWeight: 600, color: "#12141d", mb: { xs: 2, md: 0 }, textAlign: { xs: "center", md: "left" } }}>
                   Projects Completed
                 </Typography>
-                <Typography variant="h2" sx={{ color: "#011255", fontWeight: "bold", fontSize: "32px" }}>{projects}</Typography>
-                <Typography variant="h2" sx={{ fontSize: "32px", ml: 1 }}>+</Typography>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography variant="h2" sx={{ color: "#011255", fontWeight: "bold", fontSize: { xs: "1.75rem", md: "2rem" } }}>{projects}</Typography>
+                  <Typography variant="h2" sx={{ fontSize: { xs: "1.75rem", md: "2rem" }, ml: 1 }}>+</Typography>
+                </Box>
               </Box>
-              <Typography sx={{ color: "#5A5A5A" }}>
+              <Typography sx={{ color: "#5A5A5A", textAlign: { xs: "center", md: "left" } }}>
                 Our team moves heaven and earth to transform your ideas into reality.
               </Typography>
             </Box>

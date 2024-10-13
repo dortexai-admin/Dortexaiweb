@@ -23,7 +23,7 @@ const Footr = () => {
     ];
 
     return (
-        <div style={{ padding: '2rem' }}>
+        <div style={{ padding:'2rem' }}>
             <Grid container spacing={4}>
                 <Grid item xs={12} md={4}>
                     <img src={logo} alt="Dortex AI Logo" style={{ width: '6rem' }} />
