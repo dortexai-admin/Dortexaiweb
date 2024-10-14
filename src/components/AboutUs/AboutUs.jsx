@@ -17,7 +17,7 @@ export default function AboutUs() {
                 <Navbar />
             </Box>
             <Box sx={{ pt: 20 }}>
-                <Container maxWidth="md">
+                <Container  maxWidth="lg">
                     <Typography  variant="h2" component="h2" fontWeight="bold" sx={{ color: "#12141d",mb:4 }} gutterBottom>
                         ABOUT US
                     </Typography>
@@ -36,7 +36,7 @@ export default function AboutUs() {
             </Box>
 
             <Box sx={{ py:5}}>
-                <Container maxWidth="md">
+                <Container maxWidth="lg">
                     <Typography  variant="h5" sx={{ mb: 2 ,color: "#12141d" }} gutterBottom>
                         Our Mission
                     </Typography>
