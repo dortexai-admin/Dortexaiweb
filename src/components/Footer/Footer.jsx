@@ -7,7 +7,7 @@ import logo from '../../assets/DortexAiWhite.png';
 const Footr = () => {
     // Array of important links
     const importantLinks = [
-        { href: "#About", label: "About Us" },
+        { href: "/aboutus", label: "About Us" },
         { href: "#", label: "Careers" },
     ];
     
