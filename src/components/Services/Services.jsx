@@ -46,9 +46,17 @@ const Services = () => {
       {/* <div style={{display:'flex', justifyContent:'space-between', width:'100%', padding: '0rem 1rem'}}> */}
       <div className="flex justify-between w-full px-2">
         <h1 className="text-5xl text-center text-customDark font-bold w-full md:w-auto">Our Services</h1>
-        <a className="hidden md:inline-block bg-blue-900 text-white no-underline py-4 px-12 rounded-md text-base transition-colors duration-300 ease-in-out font-semibold hover:bg-purple-700" href="#hire">
-          Hire Us
-        </a>
+        <a
+  className="hidden md:inline-block bg-blue-900 text-white no-underline py-4 px-12 rounded-md text-base transition-colors duration-300 ease-in-out font-semibold hover:bg-purple-700"
+  href="#hire"
+  onClick={(e) => {
+    e.preventDefault(); // Prevent default anchor click behavior
+    window.open("mailto:info@dortexai.com?subject=We want to hire you for a project"); // Open email client
+  }}
+>
+  Hire Us
+</a>
+
       </div>
 
       <div className="grid_container">

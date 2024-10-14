@@ -5,7 +5,7 @@ import easyjob from '../../../public/EasyJob.png';
 import abacus from '../../assets/projects/Abacus.jpg';
 import pp from '../../../public/pp.png';
 import homebuddy from '../../../public/hb.png';
-import localkonnect from '../../assets/projects/LocalKonnect.jpg';
+import localkonnect from '../../../public/Lk.jpg';
 
 const projects = [
     {

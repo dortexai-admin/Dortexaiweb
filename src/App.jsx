@@ -13,6 +13,7 @@ import DortexAiLab from "./components/DortexAiLab/DortexAiLab";  // Importing th
 import video1 from './assets/video1.mp4';
 import "./index.css";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Career from "./components/Careers/Careers";
 
 const App = () => {
   return (
@@ -64,6 +65,9 @@ const App = () => {
 
         {/* About Us Page */}
         <Route path="/aboutus" element={<AboutUs/>} />
+
+        {/* Career Page */}
+        <Route path="/careers" element={<Career/>} />
       </Routes>
     </Router>
   );

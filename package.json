@@ -20,6 +20,7 @@
     "@mui/icons-material": "^6.1.2",
     "@mui/material": "^6.1.2",
     "@mui/styled-engine-sc": "^6.1.2",
+    "cesium": "^1.122.0",
     "dortexai": "file:",
     "portfolio-nidhish": "file:",
     "react": "^18.3.1",

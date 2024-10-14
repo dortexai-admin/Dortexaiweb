@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect } from "react";
 import Navbar from '../Navbar'
 import Footr from '../Footer/Footer'
 import { Typography, Container, Box } from "@mui/material";
+
+
+
+
+
+  
+  
 
 export default function AboutUs() {
     return (
@@ -11,10 +18,10 @@ export default function AboutUs() {
             </Box>
             <Box sx={{ pt: 20 }}>
                 <Container maxWidth="md">
-                    <Typography variant="overline" sx={{ color: '#5a5a5a', fontSize: '1rem' }} gutterBottom>
+                    <Typography  variant="h2" component="h2" fontWeight="bold" sx={{ color: "#12141d",mb:4 }} gutterBottom>
                         ABOUT US
                     </Typography>
-                    <Typography variant="h2" component="h2" fontWeight="bold" sx={{ mb: 4, color: '#12141d' }}>
+                    <Typography variant="h5" sx={{ mb: 2 ,color: "#12141d" }}>
                         Company History
                     </Typography>
                     <Typography variant="body1" sx={{ color: '#5a5a5a', lineHeight: 1.7 }}>
@@ -30,15 +37,14 @@ export default function AboutUs() {
 
             <Box sx={{ py:5}}>
                 <Container maxWidth="md">
-                    <Typography variant="overline" sx={{ color: '#5a5a5a', fontSize: '1rem' }} gutterBottom>
-                        OUR MISSION
+                    <Typography  variant="h5" sx={{ mb: 2 ,color: "#12141d" }} gutterBottom>
+                        Our Mission
                     </Typography>
                     <Typography variant="body1" sx={{ color: '#5a5a5a', lineHeight: 1.7 }}>
                     Our mission is to be a leading provider of IT solutions that transform businesses and drive sustainable growth. We strive to deliver exceptional value to our clients by leveraging the latest technologies, fostering a culture of continuous learning, and maintaining the highest standards of integrity and professionalism. Contact us today to explore how we can empower your business with transformative IT solutions.
                     </Typography>
                 </Container>
             </Box>
-
             <Footr />
         </Box>
     )

@@ -8,7 +8,7 @@ const Footr = () => {
     // Array of important links
     const importantLinks = [
         { href: "/aboutus", label: "About Us" },
-        { href: "#", label: "Careers" },
+        { href: "/careers", label: "Careers" },
     ];
     
     const services = [

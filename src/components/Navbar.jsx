@@ -29,8 +29,7 @@ const Navbar = () => {
     { text: "Home", href: "/" },
     { text: "DortexAI Lab", href: "/dortexailab" },
     { text: "About Us", href: "/aboutus" },
-    { text: "Services", href: "/services" }, // Changed to a regular link
-    { text: "Internships & Training", href: "/internships" }, // Changed to a regular link
+    { text: "Internships & Training", href: "/careers" },
     { text: "Contact Us", href: "#Contact" },
   ];
 

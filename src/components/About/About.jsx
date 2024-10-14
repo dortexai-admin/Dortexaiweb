@@ -88,7 +88,7 @@ const About = () => {
               }}
             >
               <YearsInfo>
-                <LargeText>01</LargeText>
+                <LargeText>07</LargeText>
                 <Typography variant="h5" sx={{ letterSpacing: "0.625rem", fontWeight: 600, color: "#12141d" }}>
                   Years
                 </Typography>
@@ -113,7 +113,7 @@ const About = () => {
                 <i className="far fa-check-circle text-primary me-3" />
                 On Time Project Delivery
               </Typography>
-              <CustomButton href="#services">Read More</CustomButton>
+              <CustomButton href="/aboutus">Read More</CustomButton>
             </Box>
           </Grid>
 

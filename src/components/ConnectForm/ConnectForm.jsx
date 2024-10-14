@@ -23,16 +23,22 @@ const ConnectForm = () => {
                         variant="contained"
                         color="primary"
                         startIcon={<WhatsAppIcon />}
-                        href="#hire"
                         sx={{
                             marginTop: 2,
                             padding: '12px 24px',
                             backgroundColor: '#0c1274', // Custom color for WhatsApp button
                             '&:hover': { backgroundColor: '#533aa7' } // Darker shade on hover
                         }}
+                        onClick={() => {
+                            const message = "Hi DortexAI Team,\nI want to connect to have a discussion about ";
+                            const phoneNumber = "+919872094149"; // Make sure the number format is correct for WhatsApp
+                            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                            window.open(whatsappUrl, '_blank'); // Open WhatsApp in a new tab
+                        }}
                     >
                         WhatsApp
                     </Button>
+
 
                     <Box mt={4}>
                         <Typography variant="h6" color="textSecondary">
@@ -144,10 +150,11 @@ const ConnectForm = () => {
                                     variant="contained"
                                     color="primary"
                                     type="submit"
-                                    sx={{ width: '100%',
-                                    backgroundColor: '#0c1274', // Custom color for WhatsApp button
-                                    '&:hover': { backgroundColor: '#533aa7' } 
-                                }}
+                                    sx={{
+                                        width: '100%',
+                                        backgroundColor: '#0c1274', // Custom color for WhatsApp button
+                                        '&:hover': { backgroundColor: '#533aa7' }
+                                    }}
                                 >
                                     Send Message
                                 </Button>
