@@ -12,6 +12,7 @@ import Footr from "./components/Footer/Footer";
 import DortexAiLab from "./components/DortexAiLab/DortexAiLab";  // Importing the new component
 import video1 from './assets/video1.mp4';
 import "./index.css";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const App = () => {
   return (
@@ -60,6 +61,9 @@ const App = () => {
 
         {/* DortexAiLab Page */}
         <Route path="/dortexailab" element={<DortexAiLab />} />
+
+        {/* About Us Page */}
+        <Route path="/aboutus" element={<AboutUs/>} />
       </Routes>
     </Router>
   );

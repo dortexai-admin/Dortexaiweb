@@ -24,7 +24,7 @@ const LabNav = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const menuItems = [
-    { text: "Home", href: "/dortexailab" },
+    { text: "Home", href: "https://www.dortexai.com/" },
     { text: "Training & Development", href: "" },
     { text: "Our Services", href: "" },
     { text: "Models", href: "" },

@@ -13,16 +13,10 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme, styled } from "@mui/material/styles";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; // Importing arrow icon for dropdowns
 import logo from "../assets/DortexAiWhite.png";
-
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null); // State for Services dropdown
-  const [internshipAnchorEl, setInternshipAnchorEl] = useState(null); // State for Internships dropdown
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
@@ -31,52 +25,13 @@ const Navbar = () => {
     setDrawerOpen(open);
   };
 
-  // Handling the "Services" dropdown
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
-  // Handling the "Internships & Training" dropdown
-  const handleInternshipMenuOpen = (event) => {
-    setInternshipAnchorEl(event.currentTarget);
-  };
-
-  const handleInternshipMenuClose = () => {
-    setInternshipAnchorEl(null);
-  };
-
   const menuItems = [
     { text: "Home", href: "/" },
     { text: "DortexAI Lab", href: "/dortexailab" },
-    { text: "About Us", href: "#About" },
-    { text: "Services", href: "#", dropdown: true },
-    { text: "Internships & Training", href: "#", dropdown: true },
+    { text: "About Us", href: "/aboutus" },
+    { text: "Services", href: "/services" }, // Changed to a regular link
+    { text: "Internships & Training", href: "/internships" }, // Changed to a regular link
     { text: "Contact Us", href: "#Contact" },
-  ];
-
-  // Services Dropdown Options
-  const serviceOptions = [
-    { text: "Innovative AI Solutions", href: "/services/ai-solutions" },
-    { text: "Application Development", href: "/services/application-development" },
-    { text: "Web Development", href: "/services/web-development" },
-    { text: "Digital Marketing", href: "/services/digital-marketing" },
-    { text: "UI/UX Design", href: "/services/ui-ux-design" },
-  ];
-
-  // Internships & Training Dropdown Options
-  const internshipOptions = [
-    { text: "Web Development", href: "/internships/web-development" },
-    { text: "App Development", href: "/internships/app-development" },
-    { text: "Backend Development", href: "/internships/backend-development" },
-    { text: "Full Stack Development", href: "/internships/full-stack-development" },
-    { text: "UI/UX Development", href: "/internships/ui-ux-development" },
-    { text: "Cloud Development", href: "/internships/cloud-development" },
-    { text: "DevOps", href: "/internships/devops" },
-    { text: "Digital Marketing", href: "/internships/digital-marketing" },
   ];
 
   const MenuLink = styled(MuiLink)(({ theme }) => ({
@@ -104,7 +59,7 @@ const Navbar = () => {
   }));
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#0b0b08", mb: 8,  zIndex: (theme) => theme.zIndex.drawer + 1,width:'100vw' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: "#0b0b08", mb: 8, zIndex: (theme) => theme.zIndex.drawer + 1, width: '100vw' }}>
       <Toolbar>
         {!isMobile && (
           <Box sx={{ display: "flex", alignItems: "center", mr: 2 }}>
@@ -142,101 +97,17 @@ const Navbar = () => {
             mr: 5,
           }}
         >
-          {menuItems.map((item, index) =>
-            item.dropdown ? (
-              item.text === "Services" ? (
-                <Box
-                  key={index}
-                  onMouseEnter={handleMenuOpen} // Show menu on hover
-                  onMouseLeave={handleMenuClose} // Hide menu when not hovering
-                  sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
-                >
-                  <MenuLink href="#">
-                    {item.text}
-                    <ArrowDropDownIcon sx={{ ml: 0.5 }} /> {/* Down arrow */}
-                  </MenuLink>
-                  <Menu
-                    anchorEl={anchorEl}
-                    open={Boolean(anchorEl)}
-                    onClose={handleMenuClose}
-                    MenuListProps={{ "aria-labelledby": "basic-button" }}
-                    sx={{
-                      mt: 1,
-                    }}
-                    anchorOrigin={{
-                      vertical: "bottom",
-                      horizontal: "left",
-                    }}
-                    transformOrigin={{
-                      vertical: "top",
-                      horizontal: "left",
-                    }}
-                  >
-                    {serviceOptions.map((option, idx) => (
-                      <MenuItem
-                        key={idx}
-                        component={RouterLink}
-                        to={option.href}
-                        onClick={handleMenuClose}
-                      >
-                        {option.text}
-                      </MenuItem>
-                    ))}
-                  </Menu>
-                </Box>
-              ) : (
-                <Box
-                  key={index}
-                  onMouseEnter={handleInternshipMenuOpen} // Show internships menu on hover
-                  onMouseLeave={handleInternshipMenuClose} // Hide internships menu when not hovering
-                  sx={{ display: "flex", alignItems: "center", cursor: "pointer", color: 'black' }}
-                >
-                  <MenuLink href="#">
-                    {item.text}
-                    <ArrowDropDownIcon sx={{ ml: 0.5 }} /> {/* Down arrow */}
-                  </MenuLink>
-                  <Menu
-                    anchorEl={internshipAnchorEl}
-                    open={Boolean(internshipAnchorEl)}
-                    onClose={handleInternshipMenuClose}
-                    MenuListProps={{ "aria-labelledby": "basic-button" }}
-                    sx={{
-                      mt: 1,
-                    }}
-                    anchorOrigin={{
-                      vertical: "bottom",
-                      horizontal: "left",
-                    }}
-                    transformOrigin={{
-                      vertical: "top",
-                      horizontal: "left",
-                    }}
-                  >
-                    {internshipOptions.map((option, idx) => (
-                      <MenuItem
-                        key={idx}
-                        component={RouterLink}
-                        to={option.href}
-                        onClick={handleInternshipMenuClose}
-                      >
-                        {option.text}
-                      </MenuItem>
-                    ))}
-                  </Menu>
-                </Box>
-              )
-            ) : (
-              <MenuLink
-                key={index}
-                component={RouterLink}
-                to={item.href}
-                underline="none"
-                variant="body1"
-              >
-                {item.text}
-              </MenuLink>
-            )
-          )}
+          {menuItems.map((item, index) => (
+            <MenuLink
+              key={index}
+              component={RouterLink}
+              to={item.href}
+              underline="none"
+              variant="body1"
+            >
+              {item.text}
+            </MenuLink>
+          ))}
         </Box>
         {isMobile && (
           <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>

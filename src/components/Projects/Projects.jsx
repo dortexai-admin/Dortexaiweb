@@ -12,7 +12,7 @@ const projects = [
         image: easyjob,
         title: "EASY JOB",
         description: "Easy Job is an AI-powered app that helps job seekers of all backgrounds find employment including unskilled, freshers and experienced candidates at one platform.",
-        link: "/android"
+        link: "https://r3f-easyjob.vercel.app/"
     },
     {
         image: abacus,

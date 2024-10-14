@@ -9,21 +9,19 @@ const Footr = () => {
     const importantLinks = [
         { href: "#About", label: "About Us" },
         { href: "#", label: "Careers" },
-        { href: "#", label: "Our Team" },
     ];
-
-    // Array of services
+    
     const services = [
-        { href: "/services/ai-solutions", label: "Innovative AI Solutions" },
-        { href: "/services/application-development", label: "Application Development" },
-        { href: "/services/web-development", label: "Web Development" },
-        { href: "/services/digital-marketing", label: "Digital Marketing" },
-        { href: "/services/ui-ux-design", label: "UI/UX Design" },
-        { href: "/services/recruitment-solutions", label: "Recruitment Solutions" },
+        { label: "Innovative AI Solutions" },
+        {label: "Application Development" },
+        {label: "Web Development" },
+        {label: "Digital Marketing" },
+        {label: "UI/UX Design" },
+        {label: "Recruitment Solutions" },
     ];
 
     return (
-        <div style={{ padding:'2rem' }}>
+        <div style={{ padding:'2rem',backgroundColor:'black' }}>
             <Grid container spacing={4}>
                 <Grid item xs={12} md={4}>
                     <img src={logo} alt="Dortex AI Logo" style={{ width: '6rem' }} />
@@ -70,7 +68,6 @@ const Footr = () => {
                         {services.map((service, index) => (
                             <ListItem key={index} style={{ padding: '0', margin: '0' }}>
                                 <Link 
-                                    href={service.href} 
                                     color="inherit" 
                                     underline="none" 
                                     style={{ flexGrow: 1 }}
