@@ -107,41 +107,44 @@ const TechIconsWrapper = styled(Box)({
 // Carousel Section component with a flexible layout
 const TechCarousel = () => {
   return (
-    <Carousel
-      autoPlay={true}
-      animation="slide"
-      timeout={500}
-      indicators={false}
-      navButtonsAlwaysVisible={true}
-      interval={2000}
-      cycleNavigation={true} // Enable looping
-    >
-      {/* Split the data into slides */}
-      {Array.from({ length: Math.ceil(TechData.length / 14) }, (_, index) => (
-        <TechIconsWrapper key={index}>
-          {TechData.slice(index * 14, index * 14 + 14).map((tech, i) => (
-            <Tilt
-              key={i}
-              tiltMaxAngleX={40}
-              tiltMaxAngleY={40}
-              glareEnable={true}
-              glareMaxOpacity={0.9}
-              glareColor="blue"
-              glarePosition="all"
-            >
-              <CarouselItem>
-                <TechIconImage src={tech.url} alt={tech.name} />
-                <Typography variant="h6" sx={{ mt: 1,color:'#12141d'}}>
-                  {tech.name}
-                </Typography>
-              </CarouselItem>
-            </Tilt>
-          ))}
-        </TechIconsWrapper>
-      ))}
-    </Carousel>
+    <Box sx={{ zIndex: -5, position: 'relative' }}> {/* Set lower zIndex for the carousel */}
+      <Carousel
+        autoPlay={true}
+        animation="slide"
+        timeout={500}
+        indicators={false}
+        navButtonsAlwaysVisible={true}
+        interval={2000}
+        cycleNavigation={true}
+      >
+        {/* Split the data into slides */}
+        {Array.from({ length: Math.ceil(TechData.length / 14) }, (_, index) => (
+          <TechIconsWrapper key={index}>
+            {TechData.slice(index * 14, index * 14 + 14).map((tech, i) => (
+              <Tilt
+                key={i}
+                tiltMaxAngleX={40}
+                tiltMaxAngleY={40}
+                glareEnable={true}
+                glareMaxOpacity={0.9}
+                glareColor="blue"
+                glarePosition="all"
+              >
+                <CarouselItem>
+                  <TechIconImage src={tech.url} alt={tech.name} />
+                  <Typography variant="h6" sx={{ mt: 1, color: '#12141d' }}>
+                    {tech.name}
+                  </Typography>
+                </CarouselItem>
+              </Tilt>
+            ))}
+          </TechIconsWrapper>
+        ))}
+      </Carousel>
+    </Box>
   );
 };
+
 
 // Main Tech component with description and carousel
 const Tech = () => {

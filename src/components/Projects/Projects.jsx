@@ -3,8 +3,8 @@ import { Box, Typography, Grid, Paper } from "@mui/material";
 import Tilt from 'react-parallax-tilt';
 import easyjob from '../../../public/EasyJob.png';
 import abacus from '../../assets/projects/Abacus.jpg';
-import pp from '../../assets/projects/PpBlack.png';
-import homebuddy from '../../assets/projects/HomeBuddy.png';
+import pp from '../../../public/pp.png';
+import homebuddy from '../../../public/hb.png';
 import localkonnect from '../../assets/projects/LocalKonnect.jpg';
 
 const projects = [
