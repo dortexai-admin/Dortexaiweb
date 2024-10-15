@@ -49,15 +49,15 @@ const projects = [
 const Projects = () => {
     return (
         <Box sx={{
-            padding: '2rem',
-            textAlign: 'center',
+            textAlign: '',
             color: '#12141d',
-            paddingInline: { xs: 0, md: '5rem' }, // Responsive padding inline
             display: { xs: 'flex', md: 'block' }, // Responsive display property
             flexDirection: { xs: 'column', md: 'initial' }, // Responsive flex direction
             alignItems: { xs: 'center', md: 'initial' }, // Responsive align items
+            maxWidth:'lg',
+            paddingY:'2rem'
         }}>
-            <Typography variant="h4" component="h2" sx={{ marginBottom: '2rem', fontWeight: 'bold' }}>
+            <Typography variant="h3" component="h3" sx={{ marginBottom: '2rem', fontWeight: 'bold' }}>
                 Our Projects
             </Typography>
             <Grid container spacing={6} className=" px-3 md:px-0">

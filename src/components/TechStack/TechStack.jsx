@@ -149,7 +149,7 @@ const TechCarousel = () => {
 // Main Tech component with description and carousel
 const Tech = () => {
   return (
-    <TechContainer className="tech-container p-5 px-0 md:px-16">
+    <TechContainer sx={{maxWidth:"lg"}} className="tech-container p-5 px-0 md:">
       {/* Description Section */}
       <Box className="tech-description flex flex-col md:flex-row mb-4">
         <Box sx={{ flex: 1.1 }}>

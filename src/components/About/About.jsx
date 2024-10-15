@@ -75,7 +75,7 @@ const About = () => {
 
   return (
     <StyledBox>
-      <Box sx={{ maxWidth: "87.5rem", width: "100%" }}>
+      <Box sx={{ maxWidth: "lg", width: "100%" }}>
         <Grid container spacing={5} direction={{ xs: "column", md: "row" }}>
           {/* Left Section */}
           <Grid item xs={12} md={6}>

@@ -49,7 +49,7 @@ const App = () => {
                 <section id="Contact">
                   <Location />
                 </section>
-                <section className="Contact-frm p-5">
+                <section className="Contact-frm">
                   <ConnectForm />
                 </section>
               </main>

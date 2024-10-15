@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,6 +12,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme, styled } from "@mui/material/styles";
+import Container from "@mui/material/Container"; // Import Container from MUI
 import logo from "../assets/DortexAiWhite.png";
 
 const Navbar = () => {
@@ -58,10 +58,10 @@ const Navbar = () => {
   }));
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#0b0b08", mb: 8, zIndex: (theme) => theme.zIndex.drawer +1, width: '100vw' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: "#0b0b08", zIndex: theme.zIndex.drawer + 1, width: '100vw' }}>
       <Toolbar>
-        {!isMobile && (
-          <Box sx={{ display: "flex", alignItems: "center", mr: 2 }}>
+        <Container maxWidth="lg" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          {!isMobile && (
             <RouterLink to="/" passHref>
               <Box
                 sx={{
@@ -74,40 +74,40 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" width={100} height={100} />
               </Box>
             </RouterLink>
-          </Box>
-        )}
-        {isMobile && (
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={toggleDrawer(true)}
-          >
-            <MenuIcon />
-          </IconButton>
-        )}
-        <Box
-          sx={{
-            display: { xs: "none", md: "flex" },
-            flexGrow: 1,
-            justifyContent: "right",
-            gap: 2,
-            mr: 5,
-          }}
-        >
-          {menuItems.map((item, index) => (
-            <MenuLink
-              key={index}
-              component={RouterLink}
-              to={item.href}
-              underline="none"
-              variant="body1"
+          )}
+          {isMobile && (
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              onClick={toggleDrawer(true)}
             >
-              {item.text}
-            </MenuLink>
-          ))}
-        </Box>
+              <MenuIcon />
+            </IconButton>
+          )}
+          <Box
+            sx={{
+              display: { xs: "none", md: "flex" },
+              flexGrow: 1,
+              justifyContent: "right",
+              gap: 2,
+              mr: 5,
+            }}
+          >
+            {menuItems.map((item, index) => (
+              <MenuLink
+                key={index}
+                component={RouterLink}
+                to={item.href}
+                underline="none"
+                variant="body1"
+              >
+                {item.text}
+              </MenuLink>
+            ))}
+          </Box>
+        </Container>
         {isMobile && (
           <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
             <Box
