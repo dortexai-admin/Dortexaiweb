@@ -58,7 +58,7 @@ const Navbar = () => {
   }));
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#0b0b08", zIndex: theme.zIndex.drawer + 1, width: '100vw' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: "#0b0b08", zIndex: theme.zIndex.drawer + 1 }}>
       <Toolbar>
         <Container maxWidth="lg" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           {!isMobile && (
