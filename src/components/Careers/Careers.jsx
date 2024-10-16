@@ -21,7 +21,7 @@ const Career = () => {
         "Design and develop web applications.",
         "Work with UI/UX designers to create engaging experiences.",
         "Collaborate with developers to maintain code quality.",
-        "Manage databases and implement new features.",
+        "Manage databases and implement new features."
       ],
       educationBackground: "Bachelor’s degree in Computer Science or a related field.",
       whatWeOffer: [
@@ -34,7 +34,7 @@ const Career = () => {
     },
     {
       title: "Game Developer",
-      experience: "1+ year",
+      experience: "1+ years",
       roleDescription: "Design, develop, and maintain our rummy game for mobile platforms.",
       skillsRequired: ["C#", "C++", "JavaScript", "Game Engines (Unity/Unreal)", "Mobile Optimization", "Real-time Multiplayer"],
       responsibilities: [
@@ -107,6 +107,7 @@ const Career = () => {
       howToApply: "Send your application to info@dortexai.com with the subject line 'Application for HR Recruiter'."
     }
   ];
+  
   
 
   return (
