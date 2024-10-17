@@ -14,6 +14,7 @@ import video1 from './assets/video1.mp4';
 import "./index.css";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Career from "./components/Careers/Careers";
+import InternshipAndTraining from "./components/IntershipAndTraining/InternshipAndTraining";
 
 const App = () => {
   return (
@@ -68,6 +69,10 @@ const App = () => {
 
         {/* Career Page */}
         <Route path="/careers" element={<Career/>} />
+
+        {/* Intership page*/}
+        <Route path="/internshipandtraining" element={<InternshipAndTraining />} />
+
       </Routes>
     </Router>
   );
