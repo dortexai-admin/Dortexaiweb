@@ -29,7 +29,7 @@ const Navbar = () => {
     { text: "Home", href: "/" },
     { text: "DortexAI Lab", href: "/dortexailab" },
     { text: "About Us", href: "/aboutus" },
-    { text: "Internships & Training", href: "/careers" },
+    { text: "Internships & Training", href: "/internshipandtraining" },
     { text: "Contact Us", href: "#Contact" },
   ];
 
