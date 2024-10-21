@@ -28,52 +28,52 @@ const InternshipAndTraining = () => {
     {
       title: "Full Stack Development Internship",
       desc: "We offer full stack development internships, teaching frontend (HTML, CSS, JavaScript) and backend (Node.js, Express.js, MongoDB/MySQL) technologies. Students gain a comprehensive understanding of web development, covering user interfaces, server-side logic, and databases, preparing them for real-world projects.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "UI/UX Design Internship",
       desc: "Our UI/UX design internships teach design principles, including color theory, typography, wireframing, and usability testing. Using tools like Adobe XD and Figma, students create user-centered designs, ensuring their applications meet real-world needs, while gaining hands-on experience in industry-standard design processes.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "App Development Internship",
       desc: "We provide app development internships focused on designing, building, and deploying mobile apps using React Native or Flutter. Students learn app architecture, UI design, data management, and API integration, ensuring they are skilled in creating optimized, fully functional mobile applications.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "Backend Development Internship",
       desc: "Backend development internships focus on technologies like Node.js, Python, and databases (MySQL, PostgreSQL, MongoDB). Students master data handling, authentication, RESTful APIs, and cloud deployment, gaining the skills to manage server-side logic and ensure secure, scalable applications.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "Web Development Internship",
       desc: "In our web development internship, students learn to build responsive websites using HTML, CSS, JavaScript, and React. They also cover SEO, performance, and accessibility, ensuring that their web projects perform well across devices and are optimized for search engines.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "HR Recruitment Internship",
       desc: "Our HR recruitment internship teaches talent sourcing, candidate screening, interview techniques, and onboarding processes. Students gain experience with applicant tracking systems (ATS) and recruitment marketing tools, preparing them to build strong talent pipelines and manage the hiring process effectively.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "Digital Marketing Internship",
       desc: "Digital marketing internships teach SEO, PPC, social media, and content marketing. Students gain practical experience with Google Ads, Facebook Ads, and analytics tools, learning to optimize campaigns and track ROI, ensuring they are prepared to create effective marketing strategies.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "Hands-On Learning Approach",
       desc: "We teach students from scratch, ensuring they gain both theoretical knowledge and practical skills. With a hands-on, immersive approach, students work on live projects, gaining real-world experience in coding, design, or marketing, making them well-prepared for their future careers.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "Live Project Experience",
       desc: "Interns work on live projects, gaining real-world experience that is highly valued by employers. This hands-on approach allows students to build professional portfolios, showcasing their skills and making them job-ready by the end of the internship.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
     {
       title: "Guaranteed Placement",
       desc: "We proudly offer 100% placement for our interns, with successful placements in top companies. Our industry connections and comprehensive training programs ensure that interns are job-ready, helping them transition smoothly into their professional careers as IT professionals.",
-      bgImage: "../../../public/blackbg.png", // Add appropriate image path
+      bgImage: "./blackbg.png", // Add appropriate image path
     },
   ];
 
@@ -384,7 +384,7 @@ const InternshipAndTraining = () => {
         </p>
 
           <div>
-            <img src="../../../public/QR.png" />
+            <img src="./QR.png" />
             <Button
               variant="contained"
               color="primary"
