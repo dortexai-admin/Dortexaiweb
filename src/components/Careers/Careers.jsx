@@ -116,7 +116,7 @@ const Career = () => {
         sx={{
           position: "relative",
           height: "600px",
-          backgroundImage: `url('../../../public/dortexlab.jpg')`,
+          backgroundImage: `url('./dortexlab.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
@@ -225,7 +225,7 @@ const Career = () => {
 </Typography>
 
 <Box sx={{ mt: 2, textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
-          <img src={"../../../public/apple.png"} alt="Email Icon" style={{ width: '24px', height: '24px', marginRight: '8px' }} />
+          <img src={"./apple.png"} alt="Email Icon" style={{ width: '24px', height: '24px', marginRight: '8px' }} />
           <Typography variant="h8" sx={{ color: "#000000", fontWeight: "Bold" }}>
             info@dortexai.com
           </Typography>

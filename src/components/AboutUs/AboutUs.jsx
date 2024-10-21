@@ -7,6 +7,7 @@ import img1 from "../../assets/about/img2.jpg";
 import img2 from "../../assets/about/img4.jpg";
 import img3 from "../../assets/about/img3.jpg";
 import MyCarousel from "../carousel/MyCarousel";
+// import Incrementor from "./Incrementor";
 
 export default function AboutUs() {
   return (
@@ -256,7 +257,7 @@ export default function AboutUs() {
           </Typography>
         </Container>
       </Box>
-
+        {/* <Incrementor /> */}
       <Box sx={{ py: 5 }}>
         <Container maxWidth="lg">
         <Typography
