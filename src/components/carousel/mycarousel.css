@@ -1,0 +1,39 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body { font-family: sans-serif; }
+.carousel::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #EEE;
+  padding: 0 .25rem;
+}
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  width: 100%;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: .5rem 1rem;
+  .slide{
+    outline: 1px solid red;
+    border-radius: 8px;
+    min-width: 70%;
+    height: 70vh;
+    background: #8C8;
+  }
+}
+
+.arrow{
+  color: black;
+  cursor: pointer;
+  padding: .25rem;
+  background-color: red;
+}
