@@ -10,12 +10,50 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import contactus from "../../assets/about/contactus.jpg"; // Ensure the path is correct
 
 const ConnectForm = () => {
     return (
-        <Container maxWidth="lg">
-            <Box className="connect-form-container" sx={{ padding: 4, backgroundColor: '#f9f9f9', borderRadius: 2, boxShadow: 10 }}>
+        <Container
+            maxWidth="lg"
+            sx={{
+                position: 'relative',
+                padding: 4,
+                backgroundImage: `url(${contactus})`, // Apply background image
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderRadius: 2,
+                boxShadow: 10,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '10vh', // Full height of the viewport
+                '::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dark overlay for reducing image visibility
+                    zIndex: 1,
+                },
+            }}
+        >
+            <Box
+                className="connect-form-container"
+                sx={{
+                    padding: 4,
+                    backgroundColor: 'rgba(255, 255, 255, 0.85)', // Semi-transparent background for form
+                    borderRadius: 2,
+                    boxShadow: 10,
+                    width: '100%',
+                    position: 'relative', // Ensure form is above the overlay
+                    zIndex: 2, // Keep form content above overlay
+                }}
+            >
                 <Grid container spacing={4}>
+                    {/* Left side: Text and social buttons */}
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" fontWeight="bold" color="textPrimary">
                             Let's Work Together
@@ -27,8 +65,8 @@ const ConnectForm = () => {
                             sx={{
                                 marginTop: 2,
                                 padding: '12px 24px',
-                                backgroundColor: '#0c1274', // Custom color for WhatsApp button
-                                '&:hover': { backgroundColor: '#533aa7' } // Darker shade on hover
+                                backgroundColor: 'green', // Custom color for WhatsApp button
+                                '&:hover': { backgroundColor: '#533aa7' }, // Darker shade on hover
                             }}
                             onClick={() => {
                                 const message = "Hi DortexAI Team,\nI want to connect to have a discussion about ";
@@ -75,6 +113,7 @@ const ConnectForm = () => {
                         </Box>
                     </Grid>
 
+                    {/* Right side: Form */}
                     <Grid item xs={12} md={6}>
                         <form id="contact-form">
                             <Grid container spacing={2}>
@@ -85,6 +124,9 @@ const ConnectForm = () => {
                                         id="name"
                                         label="Your Name"
                                         variant="outlined"
+                                        InputLabelProps={{
+                                            style: { fontWeight: 'bold', color: "black" }, // Bold label
+                                        }}
                                         InputProps={{
                                             startAdornment: (
                                                 <InputAdornment position="start">
@@ -102,6 +144,9 @@ const ConnectForm = () => {
                                         label="Your Email"
                                         variant="outlined"
                                         type="email"
+                                        InputLabelProps={{
+                                            style: { fontWeight: 'bold', color: "black" }, // Bold label
+                                        }}
                                         InputProps={{
                                             startAdornment: (
                                                 <InputAdornment position="start">
@@ -115,9 +160,12 @@ const ConnectForm = () => {
                                     <TextField
                                         required
                                         fullWidth
-                                        id="subject"
-                                        label="Subject"
+                                        id="Phone"
+                                        label="Phone"
                                         variant="outlined"
+                                        InputLabelProps={{
+                                            style: { fontWeight: 'bold', color: "black" }, // Bold label
+                                        }}
                                         InputProps={{
                                             startAdornment: (
                                                 <InputAdornment position="start">
@@ -132,10 +180,13 @@ const ConnectForm = () => {
                                         required
                                         fullWidth
                                         id="message"
-                                        label="Leave a message here"
+                                        label="How Can We Help You"
                                         variant="outlined"
                                         multiline
                                         rows={4}
+                                        InputLabelProps={{
+                                            style: { fontWeight: 'bold', color: "black" }, // Bold label
+                                        }}
                                         InputProps={{
                                             startAdornment: (
                                                 <InputAdornment position="start">
@@ -153,6 +204,7 @@ const ConnectForm = () => {
                                         sx={{
                                             width: '100%',
                                             backgroundColor: '#0c1274', // Custom color for WhatsApp button
+                                            fontWeight:"bold",
                                             '&:hover': { backgroundColor: '#533aa7' }
                                         }}
                                     >

@@ -1,35 +1,30 @@
 import './mycarousel.css';
 import React, { useEffect, useRef, useState } from 'react';
 
-const MyCarousel = ({ images, autoScrollInterval = 4000 }) => {
+const MyCarousel = ({ images, autoScrollInterval = 2000 }) => { 
   const carouselRef = useRef(null);
-  const [carouselItems, setCarouselItems] = useState([...images, ...images]); // Initially duplicate the images
+  const [carouselItems, setCarouselItems] = useState([...images, images[0]]); // Duplicate the first image at the end
 
+  const scrollAmount = 600; // Reduced scroll amount for slower scrolling
   const totalImages = images.length;
 
-  // Function to scroll the carousel
   const scrollCarousel = (scrollAmount) => {
     if (carouselRef.current) {
+      const { scrollLeft, clientWidth, scrollWidth } = carouselRef.current;
+
       carouselRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth',
       });
-    }
-  };
 
-  // Handle infinite scroll by moving items dynamically
-  const updateCarouselItems = () => {
-    if (carouselRef.current) {
-      const scrollLeft = carouselRef.current.scrollLeft;
-      const itemWidth = carouselRef.current.offsetWidth;
-
-      // If scrolled past half of the items, re-arrange the items
-      if (scrollLeft >= (carouselItems.length / 2) * itemWidth) {
-        console.warn("here");
-        const updatedItems = [...carouselItems.slice(totalImages), ...carouselItems.slice(0, totalImages)];
-        setCarouselItems(carouselItems);
-        console.warn(`img=> ${updatedItems}`)
-        carouselRef.current.scrollLeft -= totalImages * itemWidth; // Adjust the scroll position back
+      // Check if we reached the duplicated last image
+      if (scrollLeft + scrollAmount >= scrollWidth - clientWidth) {
+        setTimeout(() => {
+          carouselRef.current.scrollTo({
+            left: 0,
+            behavior: 'auto', // Jump back without smooth behavior
+          });
+        }, 600); // Delay to allow the scroll to finish
       }
     }
   };
@@ -37,30 +32,24 @@ const MyCarousel = ({ images, autoScrollInterval = 4000 }) => {
   // Auto-scroll functionality
   useEffect(() => {
     const autoScroll = setInterval(() => {
-      scrollCarousel(800); // Scroll by 800px each time
-      setTimeout(updateCarouselItems, 700); // Update items after scrolling
+      scrollCarousel(scrollAmount);
     }, autoScrollInterval);
 
     return () => clearInterval(autoScroll); // Cleanup on unmount
-  }, [autoScrollInterval, carouselItems]);
+  }, [autoScrollInterval]);
 
   // Handle manual scrolling
   const handleWheel = (event) => {
     event.preventDefault();
-    scrollCarousel(event.deltaY < 0 ? -800 : 800);
-    setTimeout(updateCarouselItems, 700); // Update items after scrolling
+    scrollCarousel(event.deltaY < 0 ? -scrollAmount : scrollAmount);
   };
 
-  // Manually scroll left
   const scrollLeft = () => {
-    scrollCarousel(-800);
-    setTimeout(updateCarouselItems, 700); // Update items after scrolling
+    scrollCarousel(-scrollAmount);
   };
 
-  // Manually scroll right
   const scrollRight = () => {
-    scrollCarousel(800);
-    setTimeout(updateCarouselItems, 700); // Update items after scrolling
+    scrollCarousel(scrollAmount);
   };
 
   return (
@@ -70,9 +59,9 @@ const MyCarousel = ({ images, autoScrollInterval = 4000 }) => {
       </div>
       <div
         className="carousel"
-        onWheel={handleWheel}
         ref={carouselRef}
         style={{ scrollBehavior: 'smooth' }}
+        onWheel={handleWheel} // Uncomment if you want to enable wheel scrolling
       >
         {carouselItems.map((image, index) => (
           <div className="slide" key={index}>

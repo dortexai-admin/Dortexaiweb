@@ -15,6 +15,7 @@ import "./index.css";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Career from "./components/Careers/Careers";
 import InternshipAndTraining from "./components/IntershipAndTraining/InternshipAndTraining";
+import Contactus from "./components/Contactus/Contactus";
 
 const App = () => {
   return (
@@ -47,7 +48,7 @@ const App = () => {
                 <section id="Projects">
                   <Projects />
                 </section>
-                <section id="Contact">
+                <section id="Contactus">
                   <Location />
                 </section>
                 <section className="Contact-frm">
@@ -73,6 +74,8 @@ const App = () => {
         {/* Intership page*/}
         <Route path="/internshipandtraining" element={<InternshipAndTraining />} />
 
+        {/*contact*/}
+        <Route path="/contact" element={<Contactus/>}/>
       </Routes>
     </Router>
   );
