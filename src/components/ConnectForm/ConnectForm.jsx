@@ -36,7 +36,6 @@ const ConnectForm = () => {
                     width: '100%',
                     height: '100%',
                     backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dark overlay for reducing image visibility
-                    zIndex: 1,
                 },
             }}
         >
@@ -49,7 +48,7 @@ const ConnectForm = () => {
                     boxShadow: 10,
                     width: '100%',
                     position: 'relative', // Ensure form is above the overlay
-                    zIndex: 2, // Keep form content above overlay
+                   
                 }}
             >
                 <Grid container spacing={4}>
