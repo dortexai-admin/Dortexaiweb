@@ -30,7 +30,7 @@ const Navbar = () => {
     { text: "DortexAI Lab", href: "/dortexailab" },
     { text: "About Us", href: "/aboutus" },
     { text: "Internships & Training", href: "/internshipandtraining" },
-    { text: "Contact Us", href: "#Contact" },
+    { text: "Contact Us", href: "/contact" },
   ];
 
   const MenuLink = styled(MuiLink)(({ theme }) => ({

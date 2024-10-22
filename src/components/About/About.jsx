@@ -3,7 +3,8 @@ import { Box, Typography, Button, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import aboutImage1 from "../../assets/about-1.jpg";
 import aboutImage2 from "../../assets/about-2.jpg";
-import './About.css'
+import './About.css';
+
 
 // Styled components using MUI's styled
 const StyledBox = styled(Box)(({ theme }) => ({

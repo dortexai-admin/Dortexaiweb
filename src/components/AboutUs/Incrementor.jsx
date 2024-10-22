@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
 
 const Incrementor = () => {
-  const [jobSeekers, setJobSeekers] = useState(0);
-  const [freelanceRecruiters, setFreelanceRecruiters] = useState(0);
-  const [vendors, setVendors] = useState(0);
+  const [projects, setProjects] = useState(0);
   const [clients, setClients] = useState(0);
+  const [jobs, setJobs] = useState(0);
+  const [internships, setInternships] = useState(0);
+
+  const targetValues = {
+    projects: 25,
+    clients: 40,
+    jobs: 400,
+    internships: 500,
+  };
 
   useEffect(() => {
     // Function to increment numbers gradually
@@ -18,36 +24,99 @@ const Incrementor = () => {
           clearInterval(interval);
         }
         setFunction(value);
-      }, 50); // Adjust the speed of increment
+      }, 100); // Set interval to 100 milliseconds for faster increments
     };
 
-    increment(setJobSeekers, 15000, 300);
-    increment(setFreelanceRecruiters, 1500, 30);
-    increment(setVendors, 100, 2);
-    increment(setClients, 40, 1);
-
+    increment(setProjects, targetValues.projects, 1);
+    increment(setClients, targetValues.clients, 1);
+    increment(setJobs, targetValues.jobs, 10);
+    increment(setInternships, targetValues.internships, 10);
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.numberText}>Job Seekers: {jobSeekers.toLocaleString()}</Text>
-      <Text style={styles.numberText}>Freelance Recruiters: {freelanceRecruiters.toLocaleString()}</Text>
-      <Text style={styles.numberText}>Vendors: {vendors.toLocaleString()}</Text>
-      <Text style={styles.numberText}>Clients: {clients.toLocaleString()}</Text>
-    </View>
+    <div style={styles.container}>
+      <div style={styles.labelsRow}>
+        <p style={styles.labelText}>Projects</p>
+        <p style={styles.labelText}>Clients</p>
+        <p style={styles.labelText}>Jobs</p>
+        <p style={styles.labelText}>Internships</p>
+      </div>
+      <div style={styles.numbersRow}>
+        <div style={styles.numberContainer}>
+          <p style={styles.numberText}>
+            {projects.toLocaleString()} {projects === targetValues.projects && '+'}
+          </p>
+        </div>
+        <div style={styles.divider} />
+        <div style={styles.numberContainer}>
+          <p style={styles.numberText}>
+            {clients.toLocaleString()} {clients === targetValues.clients && '+'}
+          </p>
+        </div>
+        <div style={styles.divider} />
+        <div style={styles.numberContainer}>
+          <p style={styles.numberText}>
+            {jobs.toLocaleString()} {jobs === targetValues.jobs && '+'}
+          </p>
+        </div>
+        <div style={styles.divider} />
+        <div style={styles.numberContainer}>
+          <p style={styles.numberText}>
+            {internships.toLocaleString()} {internships === targetValues.internships && '+'}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: '20px',
+  },
+  labelsRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    textAlign: 'center',
+  },
+  numbersRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center', // Center the row
+    alignItems: 'center', // Align items vertically
+    width: '100%',
+    textAlign: 'center',
+    marginTop: '1px',
+  },
+  numberContainer: {
+    flex: 1,
+    textAlign: 'center',
+  },
+  divider: {
+    width: '1px', // Width of the divider
+    height: '114px', // Height to match the number text
+    backgroundColor: '#555555', // Color of the divider
+  },
+  labelText: {
+    fontSize: '22px',
+    fontWeight: 'bold',
+    color: '#0437ca',
+    flex: 1,
+    textAlign: 'center',
   },
   numberText: {
-    fontSize: 24,
-    marginVertical: 10,
+    fontSize: '54px',
+    fontWeight: 'bold',
+    color: '#0437ca',
+    flex: 1,
+    textAlign: 'center',
   },
-});
+};
 
 export default Incrementor;

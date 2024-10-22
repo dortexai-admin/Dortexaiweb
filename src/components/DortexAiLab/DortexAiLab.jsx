@@ -2,7 +2,7 @@ import React from 'react';
 import LabNav from './LabComponents/LabNav';
 import LabBanner from './LabComponents/LabBanner';
 import { Box } from '@mui/material';
-import LabFootr from './LabComponents/LabFooter';
+import LabFootr from '../Footer/Footer';
 import TrainingDevelopmentCard from './LabComponents/TrainingDevelopment';
 import LabServices from './LabComponents/LabServices';
 import LabProjects from './LabComponents/LabProjects';
