@@ -1,19 +1,8 @@
 import React, { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import Box from "@mui/material/Box";
-import { Link as RouterLink } from 'react-router-dom'; // Corrected import
-import MuiLink from "@mui/material/Link"; // Renaming MUI Link to avoid conflict
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { AppBar, Toolbar,  IconButton,  MenuIcon,  Box,  MuiLink,  Drawer,  List,  ListItem,  ListItemText,  useMediaQuery, Container} from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
-import Container from "@mui/material/Container"; // Import Container from MUI
 import logo from "../assets/DortexAiWhite.png";
+import { Link as RouterLink } from 'react-router-dom'; // Corrected import
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
