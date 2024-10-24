@@ -10,7 +10,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import contactus from "../../assets/about/contactus.jpg"; // Ensure the path is correct
+import contactus from "../../assets/about/contactf.jpg"; // Ensure the path is correct
 
 const ConnectForm = () => {
     return (
@@ -22,8 +22,9 @@ const ConnectForm = () => {
                 backgroundImage: `url(${contactus})`, // Apply background image
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                borderRadius: 2,
-                boxShadow: 10,
+                borderRadius: 4,
+                // boxShadow: 10,
+                // boxShadow: '0 4px 10px rgba(0, 1, 255, 2)', // Blue box shadow
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
@@ -35,7 +36,8 @@ const ConnectForm = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dark overlay for reducing image visibility
+                    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+                    // backgroundColor: 'blue', // Dark overlay for reducing image visibility
                 },
             }}
         >
@@ -43,7 +45,7 @@ const ConnectForm = () => {
                 className="connect-form-container"
                 sx={{
                     padding: 4,
-                    backgroundColor: 'rgba(255, 255, 255, 0.85)', // Semi-transparent background for form
+                    backgroundColor: 'rgba(255, 255, 255, 0.95)', // Semi-transparent background for form
                     borderRadius: 2,
                     boxShadow: 10,
                     width: '100%',

@@ -14,7 +14,7 @@ export default function Contactus() {
         minHeight: '100vh',
         marginTop:12,
         justifyContent: 'space-between', 
-        gap: 2, 
+        gap: 5, 
       }}
     >
       <Box>

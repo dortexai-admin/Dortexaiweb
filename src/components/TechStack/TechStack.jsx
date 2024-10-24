@@ -165,7 +165,7 @@ const Tech = () => {
           </Typography>
         </Box>
         <Box className="empty" sx={{ flex: 1}}>
-          <img src={services} alt="Services" className="h-auto w-full pt-6 md:w-auto md:h-[20rem] md:pl-[13rem]" />
+          <img src={services} alt="Services" className="h-auto w-full pt-6 md:w-auto md:h-[20rem] md:pl-[11rem]" />
         </Box>
       </Box>
 

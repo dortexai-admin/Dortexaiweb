@@ -29,7 +29,7 @@ const Services = () => {
       icon: webDevelopmentIcon,
       title: "Website Development",
       description:
-        "We provide customized Web Development solutions for the satisfaction of our customers worldwide, ranging from new businesses to established organizations.",
+        "We provide customized Web Development solutions for the satisfaction of our customers worldwide.",
     },
     {
       icon: digitalMarketingIcon,
@@ -107,7 +107,7 @@ const Services = () => {
                 component="img"
                 src={service.icon}
                 alt={service.title}
-                sx={{ width: "25%", aspectRatio: "1/1" }}
+                sx={{ width: "35%", aspectRatio: "1/1" }}
               />
               <Typography
                 variant="h6"

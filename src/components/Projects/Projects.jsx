@@ -49,12 +49,12 @@ const projects = [
 const Projects = () => {
     return (
         <Box sx={{
-            textAlign: '',
+            textAlign: 'justify',
             color: '#12141d',
             display: { xs: 'flex', md: 'block' }, // Responsive display property
             flexDirection: { xs: 'column', md: 'initial' }, // Responsive flex direction
             alignItems: { xs: 'center', md: 'initial' }, // Responsive align items
-            maxWidth:'lg',
+            maxWidth:'165vh',
             paddingY:'2rem'
         }}>
             <Typography variant="h3" component="h3" sx={{ marginBottom: '2rem', fontWeight: 'bold' }}>
@@ -70,7 +70,7 @@ const Projects = () => {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
-                                    height: { xs: '200px', md: '400px' }, // Responsive height
+                                    height: { xs: '250px', md: '370px' }, // Responsive height
                                     padding: {xs:'2.2rem',md:'1rem'},
                                     borderRadius: '8px',
                                     border: '2px solid lightgray',
