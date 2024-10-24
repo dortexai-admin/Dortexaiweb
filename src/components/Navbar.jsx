@@ -54,7 +54,7 @@ const Navbar = () => {
     },
     "&:hover::after": {
       visibility: "visible",
-      width: "100%",
+      width: "100vw",
     },
   }));
 
