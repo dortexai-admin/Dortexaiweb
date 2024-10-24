@@ -36,6 +36,7 @@ const Navbar = () => {
   const MenuLink = styled(MuiLink)(({ theme }) => ({
     color: "white",
     textDecoration: "none",
+    fontWeight:"bold",
     position: "relative",
     "&:hover": {
       color: theme.palette.secondary.main,

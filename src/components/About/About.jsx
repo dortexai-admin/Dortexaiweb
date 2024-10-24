@@ -106,18 +106,18 @@ const About = () => {
               </Typography>
             </Box>
             <Box>
-              <Typography sx={{ color: "#5a5a5a", mb: 4, textAlign: { xs: "center", md: "left" } }}>
+              <Typography sx={{ color: "#5a5a5a", mb: 4,fontSize:20, textAlign: { xs: "center", md: "left" } }}>
                 We offer a wide range of services meeting your specific business needs.
               </Typography>
-              <Typography sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" } }}>
+              <Typography sx={{ display: "flex", alignItems: "center", mb: 3,fontSize:22, fontWeight:"bold", justifyContent: { xs: "center", md: "left" } }}>
                 <i className="far fa-check-circle text-primary me-3" />
                 Affordable Prices
               </Typography>
-              <Typography sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" } }}>
+              <Typography sx={{ display: "flex", alignItems: "center", mb: 3,fontWeight:"bold", fontSize:22, justifyContent: { xs: "center", md: "left" } }}>
                 <i className="far fa-check-circle text-primary me-3" />
                 High Quality Product
               </Typography>
-              <Typography sx={{ display: "flex", alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "left" } }}>
+              <Typography sx={{ display: "flex", alignItems: "center", mb: 3,fontWeight:"bold", fontSize:22, justifyContent: { xs: "center", md: "left" } }}>
                 <i className="far fa-check-circle text-primary me-3" />
                 On Time Project Delivery
               </Typography>
