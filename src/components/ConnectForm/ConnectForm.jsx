@@ -28,14 +28,14 @@ const ConnectForm = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                minHeight: '10vh', // Full height of the viewport
+                minHeight: '20vh', // Full height of the viewport
                 '::before': {
                     content: '""',
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    width: '100%',
-                    height: '100%',
+                    width: '80vw',
+                    height: '80vh',
                     backgroundColor: 'rgba(255, 255, 255, 0.4)',
                     // backgroundColor: 'blue', // Dark overlay for reducing image visibility
                 },

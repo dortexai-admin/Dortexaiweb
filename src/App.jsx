@@ -48,7 +48,7 @@ const App = () => {
                 <section id="Projects">
                   <Projects />
                 </section>
-                <section id="Contactus">
+                <section id="Contactus" style={{width:'100%'}}>
                   <Location />
                 </section>
                 <section className="Contact-frm">

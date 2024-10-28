@@ -38,7 +38,7 @@ justify-content: center;
 } */
 
 .header {
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +70,7 @@ justify-content: center;
 
 /* General Navbar styles */
 .navbar {
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     background-color: transparent;
     transition: background-color 0.3s ease; /* Smooth background transition when becoming fixed */
 }
@@ -78,7 +78,7 @@ justify-content: center;
 /* Fixed Navbar styles after scroll */
 .fixed-navbar {
     position: fixed;
-    top: 0;
+     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
