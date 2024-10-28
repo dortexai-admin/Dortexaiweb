@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar,  IconButton,  MenuIcon,  Box,  MuiLink,  Drawer,  List,  ListItem,  ListItemText,  useMediaQuery, Container} from "@mui/material";
+import { AppBar, Toolbar, IconButton, Box, Link as MuiLink, Drawer, List, ListItem, ListItemText, useMediaQuery } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useTheme, styled } from "@mui/material/styles";
 import Container from "@mui/material/Container"; // Import Container from MUI
-import logo from "../assets/DortexAiWhite.png"; // Correct path to the logo
 import logo from "../assets/DortexAiWhite.png";
 import { Link as RouterLink } from 'react-router-dom'; // Corrected import
 
