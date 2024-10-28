@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { AppBar, Toolbar,  IconButton,  MenuIcon,  Box,  MuiLink,  Drawer,  List,  ListItem,  ListItemText,  useMediaQuery, Container} from "@mui/material";
 import { useTheme, styled } from "@mui/material/styles";
+import Container from "@mui/material/Container"; // Import Container from MUI
+import logo from "../assets/DortexAiWhite.png"; // Correct path to the logo
 import logo from "../assets/DortexAiWhite.png";
 import { Link as RouterLink } from 'react-router-dom'; // Corrected import
 
@@ -10,7 +12,10 @@ const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const toggleDrawer = (open) => () => {
+  const toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
     setDrawerOpen(open);
   };
 
@@ -22,10 +27,11 @@ const Navbar = () => {
     { text: "Contact Us", href: "/contact" },
   ];
 
+  // Styled Link for menu items with hover effect
   const MenuLink = styled(MuiLink)(({ theme }) => ({
     color: "white",
     textDecoration: "none",
-    fontWeight:"bold",
+    fontWeight: "bold",
     position: "relative",
     "&:hover": {
       color: theme.palette.secondary.main,
@@ -43,87 +49,102 @@ const Navbar = () => {
     },
     "&:hover::after": {
       visibility: "visible",
-      width: "100vw",
+      width: "100%",
     },
   }));
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: "#0b0b08", zIndex: theme.zIndex.drawer + 1 }}>
-      <Toolbar>
-        <Container maxWidth="lg" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          {!isMobile && (
-            <RouterLink to="/" passHref>
-              <Box
-                sx={{
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  width: 100,
-                  height: 100,
-                }}
+    <>
+      <AppBar 
+        position="fixed" 
+        sx={{ backgroundColor: "#0b0b08", zIndex: theme.zIndex.drawer + 1 }} // No need to manipulate zIndex
+      >
+        <Toolbar>
+          <Container maxWidth="lg" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            {/* Logo for larger screens */}
+            {!isMobile && (
+              <RouterLink to="/">
+                <Box
+                  sx={{
+                    borderRadius: "50%",
+                    overflow: "hidden",
+                    width: 100,
+                    height: 100,
+                  }}
+                >
+                  <img src={logo} alt="Logo" width={100} height={100} />
+                </Box>
+              </RouterLink>
+            )}
+
+            {/* Menu Icon for mobile screens */}
+            {isMobile && (
+              <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                sx={{ mr: 2 }}
+                onClick={toggleDrawer(true)}
               >
-                <img src={logo} alt="Logo" width={100} height={100} />
-              </Box>
-            </RouterLink>
-          )}
-          {isMobile && (
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-              onClick={toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-          <Box
-            sx={{
-              display: { xs: "none", md: "flex" },
-              flexGrow: 1,
-              justifyContent: "right",
-              gap: 2,
-              mr: 5,
-            }}
-          >
-            {menuItems.map((item, index) => (
-              <MenuLink
-                key={index}
-                component={RouterLink}
-                to={item.href}
-                underline="none"
-                variant="body1"
-              >
-                {item.text}
-              </MenuLink>
-            ))}
-          </Box>
-        </Container>
-        {isMobile && (
-          <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+                <MenuIcon />
+              </IconButton>
+            )}
+
+            {/* Desktop Menu Links */}
             <Box
-              sx={{ width: 250 }}
-              role="presentation"
-              onClick={toggleDrawer(false)}
-              onKeyDown={toggleDrawer(false)}
+              sx={{
+                display: { xs: "none", md: "flex" },
+                flexGrow: 1,
+                justifyContent: "right",
+                gap: 2,
+                mr: 5,
+              }}
             >
-              <List>
-                {menuItems.map((item, index) => (
-                  <ListItem
-                    button
-                    component={RouterLink}
-                    key={index}
-                    to={item.href}
-                    onClick={toggleDrawer(false)}
-                  >
-                    <ListItemText primary={item.text} />
-                  </ListItem>
-                ))}
-              </List>
+              {menuItems.map((item, index) => (
+                <MenuLink
+                  key={index}
+                  component={RouterLink}
+                  to={item.href}
+                  underline="none"
+                  variant="body1"
+                >
+                  {item.text}
+                </MenuLink>
+              ))}
             </Box>
-          </Drawer>
-        )}
-      </Toolbar>
-    </AppBar>
+          </Container>
+        </Toolbar>
+      </AppBar>
+
+      {/* Drawer for mobile screens */}
+      <Drawer
+        anchor="left"
+        open={drawerOpen}
+        onClose={toggleDrawer(false)}
+        sx={{ zIndex: theme.zIndex.modal }} // Use a high zIndex value for the Drawer (above modal)
+      >
+        <Box
+          sx={{ width: 200}}
+          role="presentation"
+          onClick={toggleDrawer(false)} 
+          onKeyDown={toggleDrawer(false)} 
+        >
+          <List>
+            {menuItems.map((item, index) => (
+              <ListItem
+                button
+                component={RouterLink}
+                key={index}
+                to={item.href}
+                onClick={toggleDrawer(false)} // Close the drawer when a menu item is clicked
+              >
+                <ListItemText primary={item.text} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+    </>
   );
 };
 

@@ -18,6 +18,49 @@ import InternshipAndTraining from "./components/IntershipAndTraining/InternshipA
 import Contactus from "./components/Contactus/Contactus";
 
 const App = () => {
+  return (
+    <Router>
+      <Routes>
+        {/* Main Website */}
+        <Route
+          path="/"
+          element={
+            <>
+              <header className="header">
+                <video autoPlay muted loop className="video-background">
+                  <source src={video1} type="video/mp4" />
+                </video>
+                <div className="head-cont">
+                  <Navbar />
+                  <Banner />
+                </div>
+              </header>
+              <main>
+                <section className="About" id="About">
+                  <About />
+                </section>
+                <section className="Tech">
+                  <Tech />
+                </section>
+                <section className="services" id="Services">
+                  <Services />
+                </section>
+                <section id="Projects">
+                  <Projects />
+                </section>
+                <section id="Contactus" style={{width:'100%'}}>
+                  <Location />
+                </section>
+                <section className="Contact-frm">
+                  <ConnectForm />
+                </section>
+              </main>
+              <footer>
+                <Footr />
+              </footer>
+            </>
+          }
+        />
 	return (
 		<Router>
 			<Routes>
