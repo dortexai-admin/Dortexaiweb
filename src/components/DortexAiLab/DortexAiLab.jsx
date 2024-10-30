@@ -9,6 +9,7 @@ import LabProjects from './LabComponents/LabProjects';
 import LabModals from './LabComponents/LabModals';
 import LabEndSection from './LabComponents/LabEndSection';
 
+
 function DortexAiLab() {
   return (
     <Box sx={{ minHeight: '100vh' }}>
