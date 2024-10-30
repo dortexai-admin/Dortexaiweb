@@ -26,15 +26,16 @@ const LabNav = () => {
   const menuItems = [
     { text: "Home", href: "https://www.dortexai.com/" },
     { text: "Training & Development", href: "" },
-    { text: "Our Services", href: "" },
+    { text: "Our Services", href: "/ourservices" },
     { text: "Models", href: "" },
-    { text: "About Us", href: "" },
-    { text: "Careers", href: "" },
-    { text: "Contact Us", href: "" },
+    { text: "About Us", href: "/aboutus" },
+    { text: "Careers", href: "/careers" },
+    { text: "Contact Us", href: "/contact" },
   ];
   
   const MenuLink = styled(MuiLink)(({ theme }) => ({
     color: "white",
+    fontWeight:"bold",
     textDecoration: "none",
     position: "relative",
     "&:hover": {

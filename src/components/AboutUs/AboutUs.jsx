@@ -10,7 +10,7 @@ import img4 from "../../../public/dortexlab.jpg";
 import img5 from "../../../public/lab.jpg";
 import img1 from "../../assets/about/img2.jpg";
 import Incrementor from "./Incrementor";
-import backgroundimageofabout from "../../../public/addimage.png";
+import backgroundimageofabout from "../../../public/backgroundofabout.jpeg";
 // import AffiliateBanner from "./Circlecomponent";
 import Poster from "./Poster";
 

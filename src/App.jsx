@@ -16,6 +16,7 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Career from "./components/Careers/Careers";
 import InternshipAndTraining from "./components/IntershipAndTraining/InternshipAndTraining";
 import Contactus from "./components/Contactus/Contactus";
+import Ourservices from "./components/Ourservices/Ourservices";
 
 const App = () => {
 	return (
@@ -82,11 +83,11 @@ const App = () => {
 					element={<InternshipAndTraining />}
 				/>
 
-				{/*contact*/}
-				<Route path="/contact" element={<Contactus />} />
-			</Routes>
-		</Router>
-	);
+        {/*contact*/}
+        <Route path="/contact" element={<Contactus/>}/>
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
