@@ -1,8 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer/Footer";
-import { Typography, Container, Box, Grid } from "@mui/material";
-
+import { Typography, Container, Box } from "@mui/material";
 import img2 from "../../assets/about/img4.jpg";
 import img3 from "../../assets/about/img3.jpg";
 import MyCarousel from "../carousel/MyCarousel";
@@ -10,8 +9,7 @@ import img4 from "../../../public/dortexlab.jpg";
 import img5 from "../../../public/lab.jpg";
 import img1 from "../../assets/about/img2.jpg";
 import Incrementor from "./Incrementor";
-import backgroundimageofabout from "../../../public/backgroundofabout.jpeg";
-// import AffiliateBanner from "./Circlecomponent";
+import backgroundimageofabout from "../../../public/Addbackground.png";
 import Poster from "./Poster";
 
 export default function AboutUs() {
@@ -44,7 +42,16 @@ export default function AboutUs() {
               US
             </Box>
           </Typography>
-          <Typography sx={{ color: "black", fontWeight: "200", mb: 4, mt: 2,textAlign:'justify' }}>
+          <Typography
+            sx={{
+              color: "black",
+              fontWeight: "200",
+              mb: 4,
+              mt: 2,
+              textAlign: "justify",
+              fontSize: 18,
+            }}
+          >
             Dortex AI Pvt Ltd is a leading service and product-based company
             with a team of skilled IT professionals who bring over seven years
             of combined experience in delivering innovative technology
@@ -65,8 +72,8 @@ export default function AboutUs() {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "center", // Center the image horizontally
-              alignItems: "center", // Center the image vertically
+              justifyContent: "center",
+              alignItems: "center",
               objectFit: "contain",
             }}
           >
@@ -74,9 +81,8 @@ export default function AboutUs() {
               src={backgroundimageofabout}
               alt="Description of the image"
               style={{
-                maxWidth: "100%", // Make image responsive
-                height: "auto", // Maintain aspect ratio
-
+                maxWidth: "100%",
+                height: "80%",
               }}
             />
           </Box>
@@ -87,7 +93,7 @@ export default function AboutUs() {
             component="h2"
             fontWeight="bold"
             gutterBottom
-            sx={{ marginTop: 5 }}
+            sx={{ marginTop: 5, fontSize: 25 }}
           >
             <Box
               component="span"
@@ -111,35 +117,23 @@ export default function AboutUs() {
             </Box>
           </Typography>
 
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, fontSize: 18 }}>
             We are a global leader in product development, having a wide range
             of technology experts under the same roof. You would be surprised to
             meet our enthusiastic team of blockchain, cloud, Mobility &
             Automation.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             Our mission is to help companies adopt new technologies and simplify
             complicated issues that arise amid technology evolution.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             We are designers, engineers, developers, analysts, programmers,
             testers, cloud experts, blockchain specialists, automation freaks &
             smart workers who have developed applications that are now being
             used by millions of consumers worldwide.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             We know how to build successful software products and welcome
             startup minds to discuss their product feasibility & scalability.
           </Typography>
@@ -152,7 +146,7 @@ export default function AboutUs() {
             component="h2"
             fontWeight="bold"
             gutterBottom
-            sx={{ marginTop: 3 }}
+            sx={{ marginTop: 3, fontSize: 25 }}
           >
             <Box
               component="span"
@@ -176,47 +170,32 @@ export default function AboutUs() {
             </Box>
           </Typography>
 
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             Diverse Service Offerings: Dortexai Pvt Ltd provides professional
             services across various domains like full-stack development, UI/UX
             design, app development, digital marketing, and more, catering to a
             wide range of client needs.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             Product Solutions: In addition to services, we develop innovative
             digital products like cloud storage platforms and job-finding apps,
             offering tools that solve real-world problems for users and
             businesses.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             End-to-End Customer Support: We provide tailored solutions to
             clients, from project planning and execution to maintenance and
             continuous support, ensuring seamless delivery and customer
             satisfaction.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             We want to bridge the unemployment gap (which stands at around 8.3%
             in 2023) by sourcing, training, and placing job seekers who are
             entering the job market every year. We will provide specific job
             training which can help them gain employable skills to work in a
             customer support/sales environment or specifically voice jobs.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
             Technology Leadership: Combining services and products, we stay at
             the forefront of technology, delivering cutting-edge solutions for
             both individual clients and the broader market.
@@ -230,7 +209,7 @@ export default function AboutUs() {
             component="h2"
             fontWeight="bold"
             gutterBottom
-            sx={{ marginTop: 2 }}
+            sx={{ marginTop: 2, fontSize: 25 }}
           >
             <Box
               component="span"
@@ -255,7 +234,13 @@ export default function AboutUs() {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2,textAlign:"justify" }}
+            sx={{
+              color: "#000000",
+              lineHeight: 1.7,
+              mt: 2,
+              textAlign: "justify",
+              fontSize: 18,
+            }}
           >
             Our mission at Dortexai Pvt Ltd is to bridge the unemployment gap by
             leveraging our services and digital products to source, train, and
@@ -267,134 +252,18 @@ export default function AboutUs() {
             board. They can earn incentives by referring candidates, enhancing
             their networks, and contributing to a streamlined hiring process.
           </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7, mt: 2 }}
-          >
-            Additionally, we aim to provide recruitment training to aspiring
-            professionals or those with a strong network interested in talent
-            acquisition. They can earn incentives by referring candidates
-            through our job board.
+          <Typography variant="body1" sx={{ color: "#000000", lineHeight: 1.7, mt: 2, fontSize: 18 }}>
+            We envision a world where every individual has the opportunity to
+            secure meaningful employment, and we are committed to being a part of
+            that journey. Our innovative solutions and unwavering dedication to
+            client satisfaction drive us forward in our mission to create
+            sustainable employment opportunities.
           </Typography>
         </Container>
       </Box>
+
       <Incrementor />
-
-      <Box sx={{ py: 5 }}>
-        <Container maxWidth="lg">
-          <Typography
-            component="h2"
-            fontWeight="bold"
-            gutterBottom
-            sx={{ marginTop: 3 }}
-          >
-            <Box
-              component="span"
-              sx={{
-                color: "#000000",
-                fontSize: 25,
-                fontWeight: "bold",
-              }}
-            >
-              Our{" "}
-            </Box>
-            <Box
-              component="span"
-              sx={{
-                color: "#0270b2",
-                fontSize: 25,
-                fontWeight: "bold",
-              }}
-            >
-              Vision
-            </Box>
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{ color: "#000000", lineHeight: 1.7,textAlign:"justify"}}
-          >
-            We envision a future where unemployment is significantly reduced
-            through the establishment of a robust affiliate network across
-            India. By empowering individuals and organizations to participate in
-            the recruitment process, we aim to enhance the sourcing of qualified
-            candidates for every job opportunity. Our strategy involves
-            fostering collaboration among a diverse range of stakeholders,
-            creating a dynamic ecosystem that bridges the gap between job
-            seekers and employers. Through innovative technology and
-            personalized support, we are committed to transforming the hiring
-            landscape, ensuring that every individual has access to meaningful
-            employment and every employer finds the talent they need to thrive.
-          </Typography>
-        </Container>
-      </Box>
-
-      {/* <Box sx={{ py: 1 }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={4}>
-              <Box
-                sx={{
-                  height: 200,
-                  background:
-                    "linear-gradient(135deg, #396e80, #37507b,#354078,#3caa8b,#38677f)",
-                  display: "flex",
-                  textAlign: "center",
-                  borderRadius: 6,
-                  fontSize: 22,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: "white",
-                  fontWeight: "bold",
-                }}
-              >
-                Elaborate affiliate network across India 5000+ by 2025
-              </Box>
-            </Grid>
-            
-            <Grid item xs={12} sm={4}>
-              <Box
-                sx={{
-                  height: 200,
-                  background:
-                    "linear-gradient(135deg, #396e80, #37507b,#354078,#3caa8b,#38677f)", // Linear gradient added
-                  display: "flex",
-                  textAlign: "center",
-                  borderRadius: 6,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: "white",
-                  fontSize: 22,
-                  fontWeight: "bold",
-                }}
-              >
-                Provide Employment to more than 50000+ job seekers by 2025
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Box
-                sx={{
-                  height: 200,
-                  background:
-                    "linear-gradient(135deg, #396e80, #37507b,#354078,#3caa8b,#38677f)",
-                  display: "flex",
-                  textAlign: "center",
-                  borderRadius: 6,
-                  fontSize: 22,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  color: "white",
-                  fontWeight: "bold",
-                }}
-              >
-                Prime Manpower provider for voice jobs
-              </Box>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box> */}
-
-        <Poster />
-      {/* <AffiliateBanner/> */}
+      <Poster />
       <Footer />
     </Box>
   );
