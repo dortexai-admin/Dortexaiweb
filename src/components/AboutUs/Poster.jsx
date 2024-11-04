@@ -6,7 +6,7 @@ function Poster() {
     <div style={styles.bannerRow}>
     <AffiliateBanner 
       bannerText="Elaborate affiliate network across India 5000+ by 2025"
-      imageSrc="./public/connection.png" // Add your image path here
+      imageSrc="../../../public/connection.png" // Add your image path here
       
     />
     <AffiliateBanner 
