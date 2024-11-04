@@ -9,7 +9,7 @@ import Location from "./components/Location/Location";
 import ConnectForm from "./components/ConnectForm/ConnectForm";
 import Projects from "./components/Projects/Projects";
 import Footr from "./components/Footer/Footer";
-import DortexAiLab from "./components/DortexAiLab/DortexAiLab"; // Importing the new component
+// import DortexAiLab from "./components/DortexAiLab/DortexAiLab"; // Importing the new component
 import video1 from "./assets/video1.mp4";
 import "./index.css";
 import AboutUs from "./components/AboutUs/AboutUs";
@@ -69,13 +69,13 @@ const App = () => {
 				/>
 
 				{/* DortexAiLab Page */}
-				<Route path="/dortexailab" element={<DortexAiLab />} />
+				{/* <Route path="/dortexailab" element={<DortexAiLab />} /> */}
 
 				{/* About Us Page */}
 				<Route path="/aboutus" element={<AboutUs />} />
 
 				{/* Career Page */}
-				<Route path="/careers" element={<Career />} />
+				<Route path="/career" element={<Career />} />
 
 				{/* Intership page*/}
 				<Route
@@ -85,6 +85,9 @@ const App = () => {
 
         {/*contact*/}
         <Route path="/contact" element={<Contactus/>}/>
+        {/*ourservices*/}
+        {/* <Route path="/ourservices" element={<Ourservices />}/> */}
+				
       </Routes>
     </Router>
   );

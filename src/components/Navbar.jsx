@@ -21,9 +21,10 @@ const Navbar = () => {
 
   const menuItems = [
     { text: "Home", href: "/" },
-    { text: "DortexAI Lab", href: "/dortexailab" },
-    { text: "About Us", href: "/aboutus" },
+    // { text: "DortexAI Lab", href: "/dortexailab" },
     { text: "Internships & Training", href: "/internshipandtraining" },
+    {text:"Career", href:"/career"},
+    { text: "About Us", href: "/aboutus" },
     { text: "Contact Us", href: "/contact" },
   ];
 
