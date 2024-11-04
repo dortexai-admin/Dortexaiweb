@@ -6,16 +6,16 @@ function Poster() {
     <div style={styles.bannerRow}>
     <AffiliateBanner 
       bannerText="Elaborate affiliate network across India 5000+ by 2025"
-      imageSrc="../../../public/connection.png" // Add your image path here
+      imageSrc="./connection.png" // Add your image path here
       
     />
     <AffiliateBanner 
       bannerText="Provide Employment to more than 50000+ job seekers by 2025"
-      imageSrc="./public/hiring.png" // Add your image path here
+      imageSrc="./hiring.png" // Add your image path here
     />
     <AffiliateBanner 
       bannerText="Prime Manpower provider for voice jobs"
-      imageSrc="./public/employment.png" // Add your image path here
+      imageSrc="./employment.png" // Add your image path here
     />
   </div>
   );
