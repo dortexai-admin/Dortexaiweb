@@ -4,6 +4,7 @@ import { styled } from "@mui/system";
 import aboutImage1 from "../../assets/about-1.jpg";
 import aboutImage2 from "../../assets/about-2.jpg";
 import './About.css';
+import Location from "../Location/Location";
 
 
 // Styled components using MUI's styled
@@ -173,7 +174,9 @@ const About = () => {
             </Box>
           </Grid>
         </Grid>
+
       </Box>
+      
     </StyledBox>
   );
 };

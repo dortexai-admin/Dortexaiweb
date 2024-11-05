@@ -265,7 +265,7 @@ const InternshipAndTraining = () => {
                 <>
                   {/* Text on left, image on right for odd indices */}
                   <Grid item xs={12} md={6}>
-                    <Box sx={{ color: "black", pb: 3 }}>
+                    <Box sx={{ color: "black", pb: 1 }}>
                       {" "}
                       {/* Add paddingBottom here */}
                       <Typography
@@ -275,7 +275,7 @@ const InternshipAndTraining = () => {
                           fontWeight: 600,
                           textAlign: "center",
                           pb: 1,
-                          marginTop: 10,
+                          marginTop: 3,
                         }} // Added paddingBottom here
                       >
                         {internship.title}
