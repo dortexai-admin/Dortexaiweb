@@ -24,6 +24,7 @@
     "dortexai": "file:",
     "embla-carousel-autoplay": "^8.3.0",
     "embla-carousel-react": "^8.3.0",
+    "lucide-react": "^0.459.0",
     "portfolio-nidhish": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -50,8 +51,8 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.12",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
     "vite": "^5.4.7"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",

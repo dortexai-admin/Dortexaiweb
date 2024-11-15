@@ -11,6 +11,7 @@ import img1 from "../../assets/about/img2.jpg";
 import Incrementor from "./Incrementor";
 import backgroundimageofabout from "../../../public/Addbackground.png";
 import Poster from "./Poster";
+import OurBranches from "./OurBranches";
 
 export default function AboutUs() {
   return (
@@ -261,6 +262,8 @@ export default function AboutUs() {
           </Typography>
         </Container>
       </Box>
+
+      <OurBranches/>
 
       <Incrementor />
       <Poster />
