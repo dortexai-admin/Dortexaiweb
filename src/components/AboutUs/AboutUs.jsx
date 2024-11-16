@@ -204,7 +204,7 @@ export default function AboutUs() {
           </Typography>
         </Container>
       </Box>
-      <Box sx={{ py: 2 }}>
+      {/* <Box sx={{ py: 2 }}>
         <Container maxWidth="lg">
           <Typography
             component="h2"
@@ -270,7 +270,7 @@ export default function AboutUs() {
           </Typography>
           </Typography>
           </Container>
-          </Box>
+          </Box> */}
 
       <Box sx={{ py: 2 }}>
         <Container maxWidth="lg">
