@@ -12,6 +12,7 @@ import Incrementor from "./Incrementor";
 import backgroundimageofabout from "../../../public/Addbackground.png";
 import Poster from "./Poster";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import OurBranches from "./OurBranches";
 
 export default function AboutUs() {
   return (
@@ -329,6 +330,8 @@ export default function AboutUs() {
           </Typography>
         </Container>
       </Box>
+
+      <OurBranches/>
 
       <Incrementor />
       <Poster />
