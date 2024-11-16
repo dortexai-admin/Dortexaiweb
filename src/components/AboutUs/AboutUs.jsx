@@ -11,6 +11,7 @@ import img1 from "../../assets/about/img2.jpg";
 import Incrementor from "./Incrementor";
 import backgroundimageofabout from "../../../public/Addbackground.png";
 import Poster from "./Poster";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 export default function AboutUs() {
   return (
@@ -202,6 +203,73 @@ export default function AboutUs() {
           </Typography>
         </Container>
       </Box>
+      <Box sx={{ py: 2 }}>
+        <Container maxWidth="lg">
+          <Typography
+            component="h2"
+            fontWeight="bold"
+            gutterBottom
+            sx={{ marginTop: 2, fontSize: 25 }}
+          >
+            <Box
+              component="span"
+              sx={{
+                color: "#000000",
+                fontSize: 25,
+                fontWeight: "bold",
+              }}
+            >
+              Our{" "}
+            </Box>
+            <Box
+              component="span"
+              sx={{
+                color: "#0270b2",
+                fontSize: 25,
+                fontWeight: "bold",
+              }}
+            >
+              Branches
+            </Box>
+          </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              color: "#000000",
+              lineHeight: 1.7,
+              mt: 2,
+              textAlign: "justify",
+              fontSize: 18,
+            }}
+          >
+             <Typography
+            variant="body1"
+            sx={{
+              color: "#000000",
+              lineHeight: 1.7,
+              mt: 2,
+              fontWeight:"bold",
+              textAlign: "justify",
+              fontSize: 18,
+            }}
+          >
+          <ol>
+          <LocationOnIcon sx={{ color: 'black', marginRight: '1.5rem',marginTop:-1 }} />
+          Chandigarh Group of College, Landran Mohali Punjab
+          </ol>
+          <ol>
+          <LocationOnIcon sx={{ color: 'black', marginRight: '1.5rem',marginTop:-1 }} />
+          Rajasthan Sikar coming soon.
+          </ol>
+          <ol>
+          <LocationOnIcon sx={{ color: 'black', marginRight: '1.5rem',marginTop:-1 }} />
+          Noida coming soon.
+          </ol>
+          
+          </Typography>
+          </Typography>
+          </Container>
+          </Box>
 
       <Box sx={{ py: 2 }}>
         <Container maxWidth="lg">
