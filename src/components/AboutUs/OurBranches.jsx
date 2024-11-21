@@ -27,6 +27,7 @@ const branches = [
     phone: "+91 98720 94149",
     email: "info@dortexai.com",
   },
+  
 ];
 
 export default function OurBranches() {

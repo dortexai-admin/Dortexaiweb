@@ -8,7 +8,7 @@ const Incrementor = () => {
 
   const targetValues = {
     projects: 25,
-    clients: 40,
+    clients: 149,
     jobs: 400,
     internships: 500,
   };
@@ -28,7 +28,7 @@ const Incrementor = () => {
     };
 
     increment(setProjects, targetValues.projects, 1);
-    increment(setClients, targetValues.clients, 1);
+    increment(setClients, targetValues.clients, 10);
     increment(setJobs, targetValues.jobs, 10);
     increment(setInternships, targetValues.internships, 10);
   }, []);
