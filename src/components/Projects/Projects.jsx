@@ -4,6 +4,8 @@ import Tilt from 'react-parallax-tilt';
 import easyjob from '../../../public/EasyJob.png';
 import abacus from '../../assets/projects/Abacus.jpg';
 import pp from '../../../public/pp.png';
+import td from '../../../public/td.png';
+import sh from '../../../public/sh.png';
 import homebuddy from '../../../public/hb.png';
 import localkonnect from '../../../public/Lk.jpg';
 
@@ -18,31 +20,37 @@ const projects = [
         image: abacus,
         title: "ABACUS CLOUD",
         description: "Abacus Cloud a storage platform where users can store their data files and many more things with premium features...",
-        link: "/react"
+        link: "https://www.behance.net/gallery/210505453/Abacus-Cloud"
     },
     {
         image: pp,
         title: "Perfect Propertys",
         description: "Perfect Propertys is a real estate platform designed to connect builders, brokers, and clients looking for properties, PG (Paying Guest accommodations), and rentals...",
-        link: "/laravel"
+        link: "https://www.behance.net/gallery/210507789/Perfect-Propertys"
     },
     {
         image: homebuddy,
         title: "HOMBEBUDDY",
         description: "HomeBuddy is a platform that connects users with their ideal home and property services...",
-        link: "/laravel"
+        link: "#"
     },
     {
         image: localkonnect,
         title: "LocalKonnect",
         description: "LocalKonnect helps users find local services and businesses in their area.",
-        link: "/laravel"
+        link: "https://localkonnect.com/"
     },
     {
-        image: pp,
-        title: "Perfect Propertys",
-        description: "Perfect Propertys is a real estate platform designed to connect builders, brokers, and clients looking for properties, PG (Paying Guest accommodations), and rentals...",
-        link: "/laravel"
+        image: sh,
+        title: "Skyway Holidays",
+        description: "Developed a React Native app for a Pattaya-based hotel client, providing a streamlined booking experience and tailored features to enhance user engagement and hospitality services.",
+        link: "https://www.skywayholidays.in/"
+    },
+    {
+        image: td,
+        title: "Trip Dude",
+        description: "Designed and deployed a dynamic website for a leading travel company, showcasing seamless booking solutions and an engaging user experience. Tailored to enhance customer interaction and streamline travel planning.",
+        link: "https://www.tripdude.in/"
     }
 ];
 
@@ -95,6 +103,7 @@ const Projects = () => {
                                         sx={{ marginTop: '1rem', cursor: 'pointer' }}
                                         component="a"
                                         href={project.link}
+                                        target="_blank"
                                     >
                                         Show More ➔
                                     </Typography>
