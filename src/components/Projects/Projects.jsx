@@ -6,6 +6,7 @@ import abacus from '../../assets/projects/Abacus.jpg';
 import pp from '../../../public/pp.png';
 import td from '../../../public/td.png';
 import sh from '../../../public/sh.png';
+import thc from '../../../public/thc.png';
 import homebuddy from '../../../public/hb.png';
 import localkonnect from '../../../public/Lk.jpg';
 
@@ -50,6 +51,12 @@ const projects = [
         image: td,
         title: "Trip Dude",
         description: "Designed and deployed a dynamic website for a leading travel company, showcasing seamless booking solutions and an engaging user experience. Tailored to enhance customer interaction and streamline travel planning.",
+        link: "https://www.tripdude.in/"
+    },
+    {
+        image: thc,
+        title: "The Hiring Company",
+        description: "Developed a web application for a New Delhi-based recruitment and staffing firm to streamline bulk hiring and enhance user accessibility. Focused on decentralizing recruitment operations and building an affiliate network of 1500+ freelance recruiters.",
         link: "https://www.tripdude.in/"
     }
 ];
