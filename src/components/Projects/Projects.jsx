@@ -38,27 +38,15 @@ const projects = [
     {
         image: localkonnect,
         title: "LocalKonnect",
-        description: "LocalKonnect helps users find local services and businesses in their area.",
+        description: "LocalKonnect helps users find local services and businesses in their area...",
         link: "https://localkonnect.com/"
     },
     {
         image: sh,
         title: "Skyway Holidays",
-        description: "Developed a React Native app for a Pattaya-based hotel client, providing a streamlined booking experience and tailored features to enhance user engagement and hospitality services.",
+        description: "SkywayHoliday app revolutionizes the hotel booking experience for travelers visiting Pattaya. With just a few taps, users can easily book their stay...",
         link: "https://www.skywayholidays.in/"
     },
-    {
-        image: td,
-        title: "Trip Dude",
-        description: "Designed and deployed a dynamic website for a leading travel company, showcasing seamless booking solutions and an engaging user experience. Tailored to enhance customer interaction and streamline travel planning.",
-        link: "https://www.tripdude.in/"
-    },
-    {
-        image: thc,
-        title: "The Hiring Company",
-        description: "Developed a web application for a New Delhi-based recruitment and staffing firm to streamline bulk hiring and enhance user accessibility. Focused on decentralizing recruitment operations and building an affiliate network of 1500+ freelance recruiters.",
-        link: "https://www.tripdude.in/"
-    }
 ];
 
 const Projects = () => {
