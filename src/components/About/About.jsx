@@ -71,8 +71,8 @@ const About = () => {
   };
 
   useEffect(() => {
-    incrementCounter(149, setClients);
-    incrementCounter(25, setProjects);
+    incrementCounter(400 , setClients);
+    incrementCounter(110, setProjects);
   }, []);
 
   return (
