@@ -78,7 +78,7 @@ const Footr = () => {
                         <Typography variant="h6" fontWeight="bold">Get in Touch</Typography>
                         <div style={{ display: 'flex', alignItems: 'center', marginTop: '1rem' }}>
                             <LocationOnIcon sx={{ color: 'white', marginRight: '0.5rem' }} />
-                            <Typography variant="body2">Chandigarh Group of College, Landran Mohali Punjab</Typography>
+                            <Typography variant="body2">431, Opposite Gillco valley, Landra Kharar road, SEC 115, Sector 115, Kharar, Punjab 140301</Typography>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', marginTop: '0.5rem' }}>
                             <EmailIcon sx={{ color: 'white', marginRight: '0.5rem' }} />

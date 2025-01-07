@@ -7,8 +7,8 @@ const Incrementor = () => {
   const [internships, setInternships] = useState(0);
 
   const targetValues = {
-    projects: 25,
-    clients: 149,
+    projects: 110,
+    clients: 400,
     jobs: 400,
     internships: 500,
   };

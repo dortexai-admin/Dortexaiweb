@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 const branches = [
   {
     title: "Head Office Chandigarh-Mohali",
-    address: "Chandigarh Group of College, Landran Mohali Punjab-140307, India",
+    address: "431, Opposite Gillco valley, Landra Kharar road, SEC 115, Sector 115, Kharar, Punjab 140301, India",
     phone: "+91 98720 94149",
     email: "info@dortexai.com",
   },
@@ -21,12 +21,12 @@ const branches = [
     phone: "+91 98720 94149",
     email: "info@dortexai.com",
   },
-  {
-    title: "GURUGRAM Office (Coming Soon)",
-    address: "Gurugram, Haryana, India",
-    phone: "+91 98720 94149",
-    email: "info@dortexai.com",
-  },
+  // {
+  //   title: "GURUGRAM Office (Coming Soon)",
+  //   address: "Gurugram, Haryana, India",
+  //   phone: "+91 98720 94149",
+  //   email: "info@dortexai.com",
+  // },
   
 ];
 
@@ -63,7 +63,7 @@ export default function OurBranches() {
           }}
         >
           Our custom, state-of-the-art office is in Chandigarh, Mohali. We are also going to open branches in NOIDA,
-          JAIPUR, GURUGRAM Soon.
+          JAIPUR Soon.
         </Typography>
 
         <Grid container spacing={4}>
