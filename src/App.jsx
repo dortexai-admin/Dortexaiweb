@@ -72,9 +72,9 @@ const App = () => {
 								<section id="Contactus">
 									<Location />
 								</section>
-								<section className="Contact-frm">
+								{/* <section className="Contact-frm">
 									<ConnectForm />
-								</section>
+								</section> */}
 							</main>
 							<footer>
 								<Footr />
@@ -83,30 +83,29 @@ const App = () => {
 					}
 				/>
 
-				{/* DortexAiLab Page */}
-				{/* <Route path="/dortexailab" element={<DortexAiLab />} /> */}
+                {/* DortexAiLab Page */}
+                {/* <Route path="/dortexailab" element={<DortexAiLab />} /> */}
 
-				{/* About Us Page */}
-				<Route path="/aboutus" element={<AboutUs />} />
+                {/* About Us Page */}
+                <Route path="/aboutus" element={<AboutUs />} />
 
-				{/* Career Page */}
-				<Route path="/career" element={<Career />} />
+                {/* Career Page */}
+                <Route path="/career" element={<Career />} />
 
-				{/* Intership page*/}
-				<Route
-					path="/internshipandtraining"
-					element={<InternshipAndTraining />}
-				/>
+                {/* Intership page*/}
+                <Route
+                    path="/internshipandtraining"
+                    element={<InternshipAndTraining />}
+                />
 
-        {/*contact*/}
-        <Route path="/contact" element={<Contactus/>}/>
-		{/* <Route path="/ServiceForm" element={<ServiceForm/>}/> */}
-        {/*ourservices*/}
-        {/* <Route path="/ourservices" element={<Ourservices />}/> */}
-				
-      </Routes>
-    </Router>
-  );
+                {/*contact*/}
+                <Route path="/contact" element={<Contactus />} />
+                {/* <Route path="/ServiceForm" element={<ServiceForm/>}/> */}
+                {/*ourservices*/}
+                {/* <Route path="/ourservices" element={<Ourservices />}/> */}
+            </Routes>
+        </Router>
+    );
 };
 
 export default App;
