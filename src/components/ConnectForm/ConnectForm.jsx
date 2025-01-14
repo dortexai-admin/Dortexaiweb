@@ -271,6 +271,11 @@ const ConnectForm = () => {
                                             label="Looking For"
                                             variant="outlined"
                                             value={selectedService}
+                                            onChange={(e) => {
+                                                setSelectedService(
+                                                    e.target.value
+                                                );
+                                            }}
                                         >
                                             {menuItems
                                                 .filter(
