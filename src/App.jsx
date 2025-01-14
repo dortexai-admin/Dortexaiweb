@@ -16,6 +16,15 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Career from "./components/Careers/Careers";
 import InternshipAndTraining from "./components/IntershipAndTraining/InternshipAndTraining";
 import Contactus from "./components/Contactus/Contactus";
+import MyCarousel from "./components/carousel/MyCarousel";
+//image  CT University 
+ 
+import Ct1 from "./assets/CT/ct1.jpg";
+import Ct2 from "./assets/CT/ct2.jpg";
+import Ct3 from "./assets/CT/ct3.jpg";
+import Ct4 from "./assets/CT/ct4.jpg";
+
+
 // import Ourservices from "./components/Ourservices/Ourservices";
 // import ServiceForm from "./ServiceForm/ServiceForm";
 
@@ -43,6 +52,11 @@ const App = () => {
 								</div>
 							</header>
 							<main>
+								<div >
+									
+							       <MyCarousel images={[Ct1,Ct2,Ct3,Ct4]} />
+
+								</div>
 								<section className="About" id="About">
 									<About />
 								</section>

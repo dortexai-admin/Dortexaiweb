@@ -101,7 +101,21 @@ const Navbar = () => {
           ],
         },
       ] },
-    { text: "Internships & Training", href: "/internshipandtraining" },
+    { text: "Internships & Training", 
+      // href: "/internshipandtraining"
+      subMenu: [{
+        items: [
+                { text: "Web Development", href:'/internshipandtraining'},
+                { text: "Back End Development", href: "/internshipandtraining" }, 
+                { text: "Full Stack Development", href: "/internshipandtraining" }, 
+                { text: "UI/UX Design", href: "/internshipandtraining" }, 
+                { text: "HR ", href: "/internshipandtraining" }, 
+                { text: "Digital Marketing", href: "/internshipandtraining" }, 
+                { text: "App Development", href: "/internshipandtraining" }, 
+        ]
+     }]
+
+     },
     
       
     { text: "About Us", href: "/aboutus" },

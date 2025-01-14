@@ -162,7 +162,7 @@ const Career = () => {
                 onClick={() => window.open(job.formLink, "_blank")}
                 sx={{
                   cursor: "pointer",
-                  "&:hover": { opacity: 0.9 }, // Hover effect
+                  "&:hover": { opacity: 0.9 },
                 }}
               >
                 <Paper
