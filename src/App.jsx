@@ -23,6 +23,7 @@ import Ct1 from "./assets/CT/ct1.jpg";
 import Ct2 from "./assets/CT/ct2.jpg";
 import Ct3 from "./assets/CT/ct3.jpg";
 import Ct4 from "./assets/CT/ct4.jpg";
+import PartnershipMessage from "./NavComp/PartnershipMessage";
 
 // import Ourservices from "./components/Ourservices/Ourservices";
 // import ServiceForm from "./ServiceForm/ServiceForm";
@@ -53,6 +54,7 @@ const App = () => {
                             <main>
                                 <div>
                                     <MyCarousel images={[Ct1, Ct2, Ct3, Ct4]} />
+									<PartnershipMessage/>
                                 </div>
                                 <section className="About" id="About">
                                     <About />
