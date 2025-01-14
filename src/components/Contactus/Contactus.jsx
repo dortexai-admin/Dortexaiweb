@@ -6,32 +6,32 @@ import ConnectForm from "../ConnectForm/ConnectForm";
 import Location from "../Location/Location";
 
 export default function Contactus() {
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        minHeight: '100vh',
-        marginTop:12,
-        justifyContent: 'space-between', 
-        gap: 5, 
-      }}
-    >
-      <Box>
-        <Navbar />
-      </Box>
+    return (
+        <Box
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "100vh",
+                marginTop: 12,
+                justifyContent: "space-between",
+                gap: 5,
+            }}
+        >
+            <Box>
+                <Navbar />
+            </Box>
 
-      <Box>
-        <ConnectForm />
-      </Box>
+            <Box>
+                <ConnectForm />
+            </Box>
 
-      <Box>
-        <Location />
-      </Box>
+            <Box>
+                <Location />
+            </Box>
 
-      <Box>
-        <Footer />
-      </Box>
-    </Box>
-  );
+            <Box>
+                <Footer />
+            </Box>
+        </Box>
+    );
 }
