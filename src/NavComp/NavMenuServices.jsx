@@ -155,6 +155,8 @@ export const PopupMenu = ({ subMenu }) => {
                                         item.href
                                     }?title=${encodeURIComponent(
                                         subItem.title
+                                    )}&service=${encodeURIComponent(
+                                        item.text
                                     )}`}
                                     noWrap={true}
                                     align="left"

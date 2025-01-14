@@ -31,12 +31,14 @@ import { menuItems } from "../../Utils/constants";
 const ConnectForm = () => {
     const location = useLocation();
     const [selectedTitle, setSelectedTitle] = React.useState("");
+    const [selectedService, setSelectedService] = React.useState("");
     useEffect(() => {
         const params = new URLSearchParams(location.search);
         const title = params.get("title");
+        const service = params.get("service");
         setSelectedTitle(title);
-    }, [location.search]); // Dependency on location.search ensures detection of changes
-
+        setSelectedService(service);
+    }, [location.search]);
     return (
         <Container
             maxWidth="lg"
@@ -262,11 +264,13 @@ const ConnectForm = () => {
                                     <Grid item xs={12}>
                                         {/* Options */}
                                         <TextField
+                                            required
                                             select
                                             fullWidth
-                                            id="Applying For"
-                                            label="Applying For"
+                                            id="Looking For"
+                                            label="Looking For"
                                             variant="outlined"
+                                            value={selectedService}
                                         >
                                             {menuItems
                                                 .filter(
