@@ -16,7 +16,8 @@ import AboutUs from "./components/AboutUs/AboutUs";
 import Career from "./components/Careers/Careers";
 import InternshipAndTraining from "./components/IntershipAndTraining/InternshipAndTraining";
 import Contactus from "./components/Contactus/Contactus";
-import Ourservices from "./components/Ourservices/Ourservices";
+// import Ourservices from "./components/Ourservices/Ourservices";
+// import ServiceForm from "./ServiceForm/ServiceForm";
 
 const App = () => {
 	return (
@@ -85,6 +86,7 @@ const App = () => {
 
         {/*contact*/}
         <Route path="/contact" element={<Contactus/>}/>
+		{/* <Route path="/ServiceForm" element={<ServiceForm/>}/> */}
         {/*ourservices*/}
         {/* <Route path="/ourservices" element={<Ourservices />}/> */}
 				
