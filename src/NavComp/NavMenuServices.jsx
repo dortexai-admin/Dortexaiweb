@@ -82,8 +82,8 @@ export const PopupMenu = ({ subMenu }) => {
             sx={{
                 position: "absolute",
                 top: "100%",
-                left: "40%",
-                transform: "translateX(-57%)",
+                left: "50%",
+                transform: "translateX(-50%)",
                 zIndex: 10,
                 background: "transparent",
                 borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
@@ -92,23 +92,15 @@ export const PopupMenu = ({ subMenu }) => {
                     display: "inline-block",
                     height: 21,
                 },
-                "@media (max-width: 1000px)": {
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                },
             }}
         >
             <Box
                 sx={{
                     borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
                     background: "rgba(41, 39, 39, 0.5)",
-                    padding: "12px",
+                    padding: "16px",
                     display: "flex",
-                    gap: 1,
-                    "@media (max-width: 1000px)": {
-                        padding: "8px",
-                        gap: 0.7,
-                    },
+                    gap: 2,
                 }}
             >
                 {subMenu.map((subItem, idx) => (
@@ -119,33 +111,30 @@ export const PopupMenu = ({ subMenu }) => {
                             boxShadow: "7px 7px 10px 0px rgba(0, 0, 0)",
                             flexDirection: "column",
                             gap: 2,
-                            paddingBlock: 1,
-                            paddingInline: 2,
+                            padding: "16px 4px",
                             background: "rgba(17, 16, 16, 0.9)",
                             borderRadius:
                                 "20px 20px 20px 20px / 20px 20px 0px 20px",
-                            "@media (max-width: 1000px)": {
-                                gap: 0.7,
-                                paddingBlock: 0.2,
-                                paddingInline: 0.5,
-                            },
                         }}
                     >
                         <Typography
                             variant="h6"
                             color="#ffffff"
                             noWrap={true}
-                            style={{ fontWeight: "bold" }}
                             sx={{
+                                fontWeight: "bold",
                                 fontSize: "1rem",
-                                "@media (max-width: 600px)": {
-                                    fontSize: "0.6rem",
-                                },
                             }}
                         >
                             {subItem.title}
                         </Typography>
-                        <Box sx={{ gap: 15 }}>
+                        <Box
+                            sx={{
+                                display: "grid",
+                                gridTemplateColumns:
+                                    "repeat(auto-fill, minmax(200px, 1fr))",
+                            }}
+                        >
                             {subItem.items.map((item, index) => (
                                 <Typography
                                     key={index}
@@ -158,18 +147,17 @@ export const PopupMenu = ({ subMenu }) => {
                                     )}&service=${encodeURIComponent(
                                         item.text
                                     )}`}
-                                    noWrap={true}
                                     align="left"
                                     sx={{
                                         textDecoration: "none",
-                                        marginBottom: 0.5,
+                                        textWrap: "balance",
                                         display: "flex",
                                         alignItems: "center",
                                         justifyItems: "center",
                                         color: "#ffffff",
                                         borderRadius: "8px",
-                                        padding: "8px 16px",
-                                        fontSize: "0.875rem",
+                                        padding: "6px 8px",
+                                        fontSize: "clamp(0.6rem, 1vw, .8rem)",
                                         "&::before": {
                                             content: '"◙"',
                                             color: "white",
@@ -190,10 +178,6 @@ export const PopupMenu = ({ subMenu }) => {
                                         "@keyframes rotate": {
                                             from: { transform: "rotate(0deg)" },
                                             to: { transform: "rotate(360deg)" },
-                                        },
-                                        "@media (max-width: 600px)": {
-                                            padding: "6px 12px",
-                                            fontSize: "0.75rem",
                                         },
                                     }}
                                 >
