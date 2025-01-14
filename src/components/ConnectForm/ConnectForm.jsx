@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import {
   Box,
   Typography,
@@ -22,10 +22,15 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import EmailIcon from "@mui/icons-material/Email";
 import PersonIcon from "@mui/icons-material/Person";
 import InstagramIcon from "@mui/icons-material/Instagram";
-
+import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';
 import contactus from "../../assets/about/contactf.jpg";
 
 const ConnectForm = () => {
+
+
+
+
+
   return (
     <Container
       maxWidth="lg"
@@ -232,6 +237,28 @@ const ConnectForm = () => {
                     }}
                   />
                 </Grid>
+                {/* <Grid item xs={12}>
+                  <TextField
+                    required
+                    fullWidth
+                    id="LokingFor"
+                    label="Loking For"
+                    variant="outlined"
+                    InputLabelProps={{
+                      style: {
+                        fontWeight: "bold",
+                        color: "black",
+                      }, // Bold label
+                    }}
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <ArrowDropDownCircleIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid> */}
                 <Grid item xs={12}>
                   <TextField
                     required
