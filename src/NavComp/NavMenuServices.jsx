@@ -71,109 +71,121 @@
 
 // export default NavMenuServices;
 
-
-
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Box, Typography, Paper } from "@mui/material";
 
 export const PopupMenu = ({ subMenu }) => {
-  return (
-    <Paper
-      elevation={0}
-      sx={{
-        position: "absolute",
-        top: "100%", 
-        left: "40%", 
-        transform: "translateX(-57%)", 
-        zIndex: 10,
-        background:"transparent",
-        
-        borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px", 
-        "&::before":{
-          content:'""',
-          display:"inline-block",
-          height:21,
-        }
-        
-      }}
-      >
-      <Box sx={{
-        borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
-        background: "rgba(41, 39, 39, 0.5)",
-        padding: "15px",
-        display:"flex",
-        gap:2,
-      }}>
-      {subMenu.map((subItem, idx) => (
-        <Box key={idx} sx={{
-          display:"flex",
-          boxShadow: "7px 7px 10px 0px rgba(0, 0, 0)",
-          flexDirection:"column",
-          gap:2,
-          paddingBlock:1,
-          paddingInline:2,
-          background:"rgba(17, 16, 16, 0.9)",
-          borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
-        }}>
-          <Typography variant="h6"  color="#ffffff" noWrap={true} style={{ fontWeight: "bold" }}>
-            {subItem.title}
-          </Typography>
-          <Box sx={{gap:15,}}>
-          {subItem.items.map((item, index) => (
-            <Typography
-              key={index}
-              variant="subtitle2"
-              component={RouterLink}
-              to={item.href}
-              noWrap={true}
-              align="left"
-              sx={{ textDecoration: "none",
-                marginBottom:.5,
-                display: "flex",
-                alignItems: "center",
-                justifyItems:"center",
-                color:"#ffffff",
-                borderRadius:"8px",
-                padding:"8px 16px",
-                "&::before":{
-                  content:'"◙"',
-                  color:"white",
-                  display: "inline-block",
-                  fontSize:16,
-                  
-                  
-                  paddingInline:1,
-                  transition: "color 0.3s ease", 
+    return (
+        <Paper
+            elevation={0}
+            sx={{
+                position: "absolute",
+                top: "100%",
+                left: "40%",
+                transform: "translateX(-57%)",
+                zIndex: 10,
+                background: "transparent",
+
+                borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
+                "&::before": {
+                    content: '""',
+                    display: "inline-block",
+                    height: 21,
                 },
-                "&:hover::before":{
-                  // content:'"◜"',
-                  color: "rgb(27, 218, 254)",
-                  animation: "rotate .8s linear infinite",
-                  // background: "rgba(41, 39, 39, 0.5)",
-                  
-                },
-                "&:hover": {
-                  color: "rgb(27, 218, 254)",
-                  background: "rgba(41, 39, 39, 0.5)",
-                },
-                "@keyframes rotate": {
-                  from: {
-                    transform: "rotate(0deg)",
-                  },
-                  to: {
-                    transform: "rotate(360deg)",
-                  },
-                },
-             }}
+            }}
+        >
+            <Box
+                sx={{
+                    borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
+                    background: "rgba(41, 39, 39, 0.5)",
+                    padding: "15px",
+                    display: "flex",
+                    gap: 2,
+                }}
             >
-              {item.text}
-            </Typography>
-          ))}
-          </Box>
-        </Box>
-      ))}
-      </Box>
-    </Paper>
-  );
+                {subMenu.map((subItem, idx) => (
+                    <Box
+                        key={idx}
+                        sx={{
+                            display: "flex",
+                            boxShadow: "7px 7px 10px 0px rgba(0, 0, 0)",
+                            flexDirection: "column",
+                            gap: 2,
+                            paddingBlock: 1,
+                            paddingInline: 2,
+                            background: "rgba(17, 16, 16, 0.9)",
+                            borderRadius:
+                                "20px 20px 20px 20px / 20px 20px 0px 20px",
+                        }}
+                    >
+                        <Typography
+                            variant="h6"
+                            color="#ffffff"
+                            noWrap={true}
+                            style={{ fontWeight: "bold" }}
+                        >
+                            {subItem.title}
+                        </Typography>
+                        <Box sx={{ gap: 15 }}>
+                            {subItem.items.map((item, index) => (
+                                <Typography
+                                    key={index}
+                                    variant="subtitle2"
+                                    component={RouterLink}
+                                    to={`${
+                                        item.href
+                                    }?title=${encodeURIComponent(
+                                        subItem.title
+                                    )}`}
+                                    noWrap={true}
+                                    align="left"
+                                    sx={{
+                                        textDecoration: "none",
+                                        marginBottom: 0.5,
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyItems: "center",
+                                        color: "#ffffff",
+                                        borderRadius: "8px",
+                                        padding: "8px 16px",
+                                        "&::before": {
+                                            content: '"◙"',
+                                            color: "white",
+                                            display: "inline-block",
+                                            fontSize: 16,
+
+                                            paddingInline: 1,
+                                            transition: "color 0.3s ease",
+                                        },
+                                        "&:hover::before": {
+                                            // content:'"◜"',
+                                            color: "rgb(27, 218, 254)",
+                                            animation:
+                                                "rotate .8s linear infinite",
+                                            // background: "rgba(41, 39, 39, 0.5)",
+                                        },
+                                        "&:hover": {
+                                            color: "rgb(27, 218, 254)",
+                                            background: "rgba(41, 39, 39, 0.5)",
+                                        },
+                                        "@keyframes rotate": {
+                                            from: {
+                                                transform: "rotate(0deg)",
+                                            },
+                                            to: {
+                                                transform: "rotate(360deg)",
+                                            },
+                                        },
+                                    }}
+                                >
+                                    {item.text}
+                                </Typography>
+                            ))}
+                        </Box>
+                    </Box>
+                ))}
+            </Box>
+        </Paper>
+    );
 };
