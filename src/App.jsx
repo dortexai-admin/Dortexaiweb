@@ -52,10 +52,10 @@ const App = () => {
                                 </div>
                             </header>
                             <main>
-                                <div>
+                                {/* <div>
                                     <MyCarousel images={[Ct1, Ct2, Ct3, Ct4]} />
 									<PartnershipMessage/>
-                                </div>
+                                </div> */}
                                 <section className="About" id="About">
                                     <About />
                                 </section>
