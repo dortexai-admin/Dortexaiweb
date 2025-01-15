@@ -9,8 +9,8 @@ const Incrementor = () => {
   const targetValues = {
     projects: 110,
     clients: 400,
-    jobs: 400,
-    internships: 500,
+    jobs: 1000,
+    internships: 2000,
   };
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Incrementor = () => {
           clearInterval(interval);
         }
         setFunction(value);
-      }, 100); // Set interval to 100 milliseconds for faster increments
+      }, 10); // Set interval to 100 milliseconds for faster increments
     };
 
     increment(setProjects, targetValues.projects, 1);

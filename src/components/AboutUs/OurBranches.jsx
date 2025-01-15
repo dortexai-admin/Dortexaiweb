@@ -16,7 +16,7 @@ const branches = [
     email: "info@dortexai.com",
   },
   {
-    title: "JAIPUR Office (Coming Soon)",
+    title: "JAIPUR Office ",
     address: "Jaipur, Rajasthan, India",
     phone: "+91 98720 94149",
     email: "info@dortexai.com",
