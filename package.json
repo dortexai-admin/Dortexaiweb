@@ -15,12 +15,14 @@
   "dependencies": {
     "@coreui/coreui": "^5.1.2",
     "@coreui/react": "^5.4.0",
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@mui/icons-material": "^6.1.2",
-    "@mui/material": "^6.1.2",
-    "@mui/styled-engine-sc": "^6.1.2",
+    "@mui/material": "^6.4.0",
+    "@mui/styled-engine-sc": "^6.4.0",
+    "@mui/x-tree-view": "^7.23.6",
+    "@react-spring/web": "^9.7.5",
     "cesium": "^1.122.0",
     "dortexai": "file:",
     "embla-carousel-autoplay": "^8.3.0",
@@ -37,7 +39,7 @@
     "react-slick": "^0.30.2",
     "react-tilt": "^1.0.2",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.13",
+    "styled-components": "^6.1.14",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
