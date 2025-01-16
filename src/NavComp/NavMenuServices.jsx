@@ -90,15 +90,16 @@ export const PopupMenu = ({ subMenu }) => {
                 "&::before": {
                     content: '""',
                     display: "inline-block",
-                    height: 21,
+                    height: 10,
                 },
             }}
         >
             <Box
                 sx={{
                     borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
-                    background: "rgba(41, 39, 39, 0.5)",
-                    padding: "16px",
+                    // background: "rgba(41, 39, 39, 0.5)",
+                    background: "transparent",
+                    // padding: "16px",
                     display: "flex",
                     gap: 2,
                 }}
@@ -113,8 +114,8 @@ export const PopupMenu = ({ subMenu }) => {
                             gap: 2,
                             padding: "16px 4px",
                             background: "rgba(17, 16, 16, 0.9)",
-                            borderRadius:
-                                "20px 20px 20px 20px / 20px 20px 0px 20px",
+                            borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
+                            textAlign: "center",
                         }}
                     >
                         <Typography
@@ -131,8 +132,7 @@ export const PopupMenu = ({ subMenu }) => {
                         <Box
                             sx={{
                                 display: "grid",
-                                gridTemplateColumns:
-                                    "repeat(auto-fill, minmax(200px, 1fr))",
+                                gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
                             }}
                         >
                             {subItem.items.map((item, index) => (
@@ -140,13 +140,9 @@ export const PopupMenu = ({ subMenu }) => {
                                     key={index}
                                     variant="subtitle2"
                                     component={RouterLink}
-                                    to={`${
-                                        item.href
-                                    }?title=${encodeURIComponent(
+                                    to={`${item.href}?title=${encodeURIComponent(
                                         subItem.title
-                                    )}&service=${encodeURIComponent(
-                                        item.text
-                                    )}`}
+                                    )}&service=${encodeURIComponent(item.text)}`}
                                     align="left"
                                     sx={{
                                         textDecoration: "none",
@@ -168,8 +164,7 @@ export const PopupMenu = ({ subMenu }) => {
                                         },
                                         "&:hover::before": {
                                             color: "rgb(27, 218, 254)",
-                                            animation:
-                                                "rotate .8s linear infinite",
+                                            animation: "rotate .8s linear infinite",
                                         },
                                         "&:hover": {
                                             color: "rgb(27, 218, 254)",
