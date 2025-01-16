@@ -44,47 +44,48 @@ const MenuTree = [
                 id: "2.2",
                 label: "Web",
                 children: [
-                    { id: "2.2.1", label: "Web Development" },
-                    { id: "2.2.2", label: "Website Design" },
-                    { id: "2.2.3", label: "Website Redesign" },
-                    { id: "2.2.4", label: "Responsive Design" },
+                    { id: "2.2.1", label: "Web Development", href: "/contact" },
+                    { id: "2.2.2", label: "Website Design", href: "/contact" },
+                    { id: "2.2.3", label: "Website Redesign", href: "/contact" },
+                    { id: "2.2.4", label: "Responsive Design", href: "/contact" },
                 ],
             },
             {
                 id: "2.3",
                 label: "UI/UX Design",
                 children: [
-                    { id: "2.3.1", label: "User Research & Analysis" },
-                    { id: "2.3.2", label: "Wireframing & Prototyping" },
-                    { id: "2.3.3", label: "Low-Fidelity Design" },
-                    { id: "2.3.4", label: "High-Fidelity Design" },
-                    { id: "2.3.5", label: "Responsive & Adaptive Design" },
-                    { id: "2.3.6", label: "Design System Development" },
+                    { id: "2.3.1", label: "User Research & Analysis", href: "/contact" },
+                    { id: "2.3.2", label: "Wireframing & Prototyping", href: "/contact" },
+                    { id: "2.3.3", label: "Low-Fidelity Design", href: "/contact" },
+                    { id: "2.3.4", label: "High-Fidelity Design", href: "/contact" },
+                    { id: "2.3.5", label: "Responsive & Adaptive Design", href: "/contact" },
+                    { id: "2.3.6", label: "Design System Development", href: "/contact" },
                 ],
             },
             {
                 id: "2.4",
                 label: "AI & ML Services",
                 children: [
-                    { id: "2.4.1", label: "AI-Powered App Development" },
-                    { id: "2.4.2", label: "Natural Language Processing (NLP)" },
-                    { id: "2.4.3", label: "Computer Vision Solutions" },
-                    { id: "2.4.4", label: "Chatbot and Virtual Assistant" },
-                    { id: "2.4.5", label: "Predictive Analytics" },
+                    { id: "2.4.1", label: "AI-Powered App Development", href: "/contact" },
+                    { id: "2.4.2", label: "Natural Language Processing (NLP)", href: "/contact" },
+                    { id: "2.4.3", label: "Computer Vision Solutions", href: "/contact" },
+                    { id: "2.4.4", label: "Chatbot and Virtual Assistant", href: "/contact" },
+                    { id: "2.4.5", label: "Predictive Analytics", href: "/contact" },
                 ],
             },
             {
                 id: "2.5",
                 label: "Digital Marketing Services",
                 children: [
-                    { id: "2.5.1", label: "Search Engine Optimization (SEO)" },
-                    { id: "2.5.2", label: "Pay-Per-Click Advertising (PPC)" },
-                    { id: "2.5.3", label: "Social Media Marketing (SMM)" },
-                    { id: "2.5.4", label: "Content Marketing" },
-                    { id: "2.5.5", label: "Affiliate Marketing" },
+                    { id: "2.5.1", label: "Search Engine Optimization (SEO)", href: "/contact" },
+                    { id: "2.5.2", label: "Pay-Per-Click Advertising (PPC)", href: "/contact" },
+                    { id: "2.5.3", label: "Social Media Marketing (SMM)", href: "/contact" },
+                    { id: "2.5.4", label: "Content Marketing", href: "/contact" },
+                    { id: "2.5.5", label: "Affiliate Marketing", href: "/contact" },
                     {
                         id: "2.5.6",
                         label: "Analytics and Performance Tracking",
+                        href: "/contact",
                     },
                 ],
             },
@@ -98,13 +99,13 @@ const MenuTree = [
                 id: "3.1",
                 label: "Internship",
                 children: [
-                    { id: "3.1.1", label: "Web Development" },
-                    { id: "3.1.2", label: "Back End Development" },
-                    { id: "3.1.3", label: "Full Stack Development" },
-                    { id: "3.1.4", label: "UI/UX Design" },
-                    { id: "3.1.5", label: "HR" },
-                    { id: "3.1.6", label: "Digital Marketing" },
-                    { id: "3.1.7", label: "App Development" },
+                    { id: "3.1.1", label: "Web Development", href: "/internshipandtraining" },
+                    { id: "3.1.2", label: "Back End Development", href: "/internshipandtraining" },
+                    { id: "3.1.3", label: "Full Stack Development", href: "/internshipandtraining" },
+                    { id: "3.1.4", label: "UI/UX Design", href: "/internshipandtraining" },
+                    { id: "3.1.5", label: "HR", href: "/internshipandtraining" },
+                    { id: "3.1.6", label: "Digital Marketing", href: "/internshipandtraining" },
+                    { id: "3.1.7", label: "App Development", href: "/internshipandtraining" },
                 ],
             },
         ],
@@ -112,10 +113,12 @@ const MenuTree = [
     {
         id: "4",
         label: " About Us",
+        href: "/aboutus",
     },
     {
         id: "5",
         label: "Contact Us",
+        href: "/contact",
     },
 ];
 
@@ -138,25 +141,23 @@ function TransitionComponent(props) {
 export default function RichTreeDrawer() {
     const navigate = useNavigate();
     function handleClick(event, itemId) {
-        function findItemById(items, id) {
+        function findItemById(items, id, parentLabel) {
             for (const item of items) {
-                if (item.id === id) return item;
+                if (item.id === id) return [item, parentLabel];
                 if (item.children) {
-                    const childResult = findItemById(item.children, id);
+                    const childResult = findItemById(item.children, id, item.label);
                     if (childResult) return childResult;
                 }
             }
             return null;
         }
 
-        const item = findItemById(MenuTree, itemId);
-
-        if (item && item.href) {
-            navigate(
-                `${item.href}?title=${encodeURIComponent(
-                    subItem.title
-                )}&service=${encodeURIComponent(item.text)}`
-            );
+        const [item, parent] = findItemById(MenuTree, itemId);
+        console.log(`item: ${item.href}, parent: ${parent}`);
+        if (item.href && item.href !== "") {
+            if (parent)
+                navigate(`${item.href}?title=${encodeURIComponent(parent)}&service=${encodeURIComponent(item.label)}`);
+            else navigate(item.href);
         }
     }
     return (
