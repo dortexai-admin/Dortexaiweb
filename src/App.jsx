@@ -38,12 +38,7 @@ const App = () => {
                     element={
                         <>
                             <header className="header">
-                                <video
-                                    autoPlay
-                                    muted
-                                    loop
-                                    className="video-background"
-                                >
+                                <video autoPlay muted loop className="video-background">
                                     <source src={video1} type="video/mp4" />
                                 </video>
                                 <div className="head-cont">
@@ -92,10 +87,7 @@ const App = () => {
                 <Route path="/career" element={<Career />} />
 
                 {/* Intership page*/}
-                <Route
-                    path="/internshipandtraining"
-                    element={<InternshipAndTraining />}
-                />
+                <Route path="/internshipandtraining" element={<InternshipAndTraining />} />
 
                 {/*contact*/}
                 <Route path="/contact" element={<Contactus />} />
