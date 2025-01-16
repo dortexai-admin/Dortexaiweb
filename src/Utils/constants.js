@@ -1,16 +1,5 @@
 export const menuItems = [
     {
-        text: "Company",
-        subMenu: [
-            {
-                items: [
-                    { text: "Career", href: "/career" },
-                    { text: "About Us", href: "/aboutus" },
-                ],
-            },
-        ],
-    },
-    {
         text: "Services",
         subMenu: [
             {
@@ -91,6 +80,17 @@ export const menuItems = [
         ],
     },
     {
+        text: "Company",
+        subMenu: [
+            {
+                items: [
+                    { text: "Career", href: "/career" },
+                    { text: "About Us", href: "/aboutus" },
+                ],
+            },
+        ],
+    },
+    {
         text: "Internships & Training",
         // href: "/internshipandtraining"
         subMenu: [
@@ -109,6 +109,6 @@ export const menuItems = [
         ]
     },
 
-    { text: "About Us", href: "/aboutus" },
+    // { text: "About Us", href: "/aboutus" },
     { text: "Contact Us", href: "/contact" },
 ];
