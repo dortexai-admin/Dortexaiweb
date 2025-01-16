@@ -76,7 +76,6 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        flexWrap: "wrap",
         padding: "20px",
     },
     labelsRow: {
@@ -93,7 +92,6 @@ const styles = {
         alignItems: "center", // Align items vertically
         width: "100%",
         textAlign: "center",
-        marginTop: "1px",
     },
     numberContainer: {
         flex: 1,
@@ -105,14 +103,14 @@ const styles = {
         backgroundColor: "#555555", // Color of the divider
     },
     labelText: {
-        fontSize: "22px",
+        fontSize: "clamp(1rem, 1.5vw, 1.5rem)",
         fontWeight: "bold",
         color: "#0437ca",
         flex: 1,
         textAlign: "center",
     },
     numberText: {
-        fontSize: "54px",
+        fontSize: "clamp(1.5rem, 2.5vw, 2rem)",
         fontWeight: "bold",
         color: "#0437ca",
         flex: 1,
