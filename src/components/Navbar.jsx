@@ -21,6 +21,7 @@ import logo from "../assets/DortexAiWhite.png";
 import { Link as RouterLink } from "react-router-dom"; // Corrected import
 import { PopupMenu } from "../NavComp/NavMenuServices";
 import { menuItems } from "../Utils/constants";
+import RichTreeDrawer from "../NavComp/RichTreeDrawer";
 
 const Navbar = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -182,12 +183,12 @@ const Navbar = () => {
 
             {/* Drawer for mobile screens */}
             <Drawer
-                anchor="left"
+                anchor="left"   
                 open={drawerOpen}
                 onClose={toggleDrawer(false)}
                 sx={{ zIndex: theme.zIndex.modal }}
             >
-                <Box
+                {/* <Box
                     sx={{ width: 200 }}
                     role="presentation"
                     onClick={toggleDrawer(false)}
@@ -206,7 +207,9 @@ const Navbar = () => {
                             </ListItem>
                         ))}
                     </List>
-                </Box>
+                </Box> */}
+                
+                <RichTreeDrawer/>
             </Drawer>
         </>
     );
