@@ -110,11 +110,11 @@ const MenuTree = [
             },
         ],
     },
-    {
-        id: "4",
-        label: " About Us",
-        href: "/aboutus",
-    },
+    // {
+    //     id: "4",
+    //     label: " About Us",
+    //     href: "/aboutus",
+    // },
     {
         id: "5",
         label: "Contact Us",
