@@ -17,14 +17,12 @@ const interndata = [
                     padding: 1,
                     backgroundColor: "#0c1e27",
                     // "&:hover":{
-                    //     backgroundColor: "rgb(27, 218, 254)",
+                    //     backgroundColor: "rgb(26, 219, 254)",
                     //     color:"#0c1e27",
-                        
 
                     // },
                     border: 1,
                     borderRadius: "50%",
-
                 }}
             />
         ),
@@ -109,12 +107,7 @@ export default function InternComp() {
             >
                 {interndata.map((ele, index) => (
                     <Box key={index}>
-                        <Typography
-                            variant="h6"
-                            fontWeight={600}
-                            color={"rgb(27, 218, 254)"}
-                            textAlign={"center"}
-                        >
+                        <Typography variant="h6" fontWeight={600} color={"rgb(26, 219, 254)"} textAlign={"center"}>
                             {ele.title}
                         </Typography>
                         <Typography variant="subtitle2" textAlign={"center"}>

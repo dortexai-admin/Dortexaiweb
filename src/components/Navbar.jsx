@@ -29,10 +29,7 @@ const Navbar = () => {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     const toggleDrawer = (open) => (event) => {
-        if (
-            event.type === "keydown" &&
-            (event.key === "Tab" || event.key === "Shift")
-        ) {
+        if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) {
             return;
         }
         setDrawerOpen(open);
@@ -54,7 +51,10 @@ const Navbar = () => {
                         sx={{
                             display: "flex",
                             alignItems: "center",
-                            justifyContent: "space-between",
+                            // justifyContent: "center",
+                            gap: 20,
+                            // width: isMobile ? "fit-content" : "100%",
+                            width: isMobile ? "100%" : "fit-content",
                         }}
                     >
                         {/* Logo for larger screens */}
@@ -68,12 +68,7 @@ const Navbar = () => {
                                         height: 100,
                                     }}
                                 >
-                                    <img
-                                        src={logo}
-                                        alt="Logo"
-                                        width={100}
-                                        height={100}
-                                    />
+                                    <img src={logo} alt="Logo" width={100} height={100} />
                                 </Box>
                             </RouterLink>
                         )}
@@ -96,7 +91,7 @@ const Navbar = () => {
                             sx={{
                                 display: { xs: "none", md: "flex" },
                                 flexGrow: 1,
-                                justifyContent: "right",
+                                // justifyContent: "right",
                                 gap: 2,
                                 mr: 5,
                             }}
@@ -114,7 +109,7 @@ const Navbar = () => {
                                         // border:1,
                                         // paddingBottom:10,
                                         "&:hover": {
-                                            color: "rgb(27, 218, 254)", // Change text color on hover
+                                            color: "rgb(26, 219, 254)", // Change text color on hover
                                             // background: "rgba(41, 39, 39, 0.75)", // Background color on hover
                                             // border: "1px solid rgba(255, 255, 255, 0.18)", // Border on hover
                                             // transition: "all 0.3s ease-in-out", // Smooth transition for hover effects
@@ -126,8 +121,7 @@ const Navbar = () => {
                                             left: "0",
                                             width: "0",
                                             height: "2px", // Thickness of the bottom border
-                                            backgroundColor:
-                                                "rgb(27, 218, 254)", // Bottom border color
+                                            backgroundColor: "rgb(26, 219, 254)", // Bottom border color
                                             // transform: "scaleX(0)", // Start with 0 width
                                             // transformOrigin: "bottom right", // Animates from right to left
                                             transition: "all 0.3s ease-out", // Smooth transition for the border
@@ -147,7 +141,7 @@ const Navbar = () => {
                                                 fontWeight: "500",
                                                 color: "#ffffff",
                                                 "&:hover": {
-                                                    color: "rgb(27, 218, 254)", // Change text color on hover
+                                                    color: "rgb(26, 219, 254)", // Change text color on hover
                                                 },
                                                 cursor: "pointer",
                                             }}
@@ -164,16 +158,14 @@ const Navbar = () => {
                                                 fontWeight: "500",
                                                 color: "#ffffff",
                                                 "&:hover": {
-                                                    color: "rgb(27, 218, 254)", // Change text color on hover
+                                                    color: "rgb(26, 219, 254)", // Change text color on hover
                                                 },
                                             }}
                                         >
                                             {item.text}
                                         </Link>
                                     )}
-                                    {hoveredIndex === index && item.subMenu && (
-                                        <PopupMenu subMenu={item.subMenu} />
-                                    )}
+                                    {hoveredIndex === index && item.subMenu && <PopupMenu subMenu={item.subMenu} />}
                                 </Box>
                             ))}
                         </Box>
@@ -182,12 +174,7 @@ const Navbar = () => {
             </AppBar>
 
             {/* Drawer for mobile screens */}
-            <Drawer
-                anchor="left"   
-                open={drawerOpen}
-                onClose={toggleDrawer(false)}
-                sx={{ zIndex: theme.zIndex.modal }}
-            >
+            <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)} sx={{ zIndex: theme.zIndex.modal }}>
                 {/* <Box
                     sx={{ width: 200 }}
                     role="presentation"
@@ -208,8 +195,8 @@ const Navbar = () => {
                         ))}
                     </List>
                 </Box> */}
-                
-                <RichTreeDrawer/>
+
+                <RichTreeDrawer />
             </Drawer>
         </>
     );
