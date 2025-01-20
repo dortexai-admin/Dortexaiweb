@@ -50,9 +50,11 @@ const Partners = () => {
                                 </Typography>
                                 <Box
                                     sx={{
-                                        display: "grid",
-                                        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+                                        display: "flex",
+                                        flexWrap: "wrap",
+                                        // gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
                                         gap: 2,
+                                        justifyContent: "center",
                                     }}
                                 >
                                     {subMenu.items.map((item, index) => (
@@ -68,6 +70,7 @@ const Partners = () => {
                                                 "&:hover": {
                                                     scale: 1.05,
                                                 },
+                                                width: "250px",
                                             }}
                                         >
                                             <img
@@ -96,7 +99,7 @@ const Partners = () => {
                                                     onClick={handleClose}
                                                 />
                                             </div>
-                                            <MyCarousel images={images} />
+                                            {images && images.length > 0 && <MyCarousel images={images} />}
                                             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
                                                 quo incidunt iste pariatur sed quasi perferendis error totam non, veniam
