@@ -53,7 +53,6 @@ const Partners = () => {
                                         display: "flex",
                                         flexWrap: "wrap",
                                         // gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-                                        gap: 2,
                                         transition: "all 0.5s",
                                         justifyContent: "center",
                                         "&:hover > *:not(:hover)": {
@@ -75,7 +74,8 @@ const Partners = () => {
                                                 display: "flex",
                                                 flexDirection: "column",
                                                 cursor: "pointer",
-                                                padding: 2,
+                                                paddingBlock: 2,
+                                                paddingInline: 4,
                                                 transition: "all 0.5s",
                                                 width: "250px",
                                             }}
@@ -83,7 +83,12 @@ const Partners = () => {
                                             <img
                                                 src={item.logo}
                                                 alt={item.text}
-                                                style={{ width: "100%", borderRadius: "16px", aspectRatio: "1/1" }}
+                                                style={{
+                                                    width: "100%",
+                                                    borderRadius: "16px",
+                                                    aspectRatio: "16/10",
+                                                    objectFit: "contain",
+                                                }}
                                             />
                                             <Typography
                                                 variant="subtitle1"
