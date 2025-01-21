@@ -54,7 +54,17 @@ const Partners = () => {
                                         flexWrap: "wrap",
                                         // gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
                                         gap: 2,
+                                        transition: "all 0.5s",
                                         justifyContent: "center",
+                                        "&:hover > *:not(:hover)": {
+                                            transform: "scale(0.9)",
+                                            filter: "blur(2px)",
+                                            // filter: "grayscale(100%)",
+                                            // filter: "blur(2px) grayscale(50%)",
+                                        },
+                                        "& > *:hover": {
+                                            transform: "scale(1.05)",
+                                        },
                                     }}
                                 >
                                     {subMenu.items.map((item, index) => (
@@ -67,9 +77,6 @@ const Partners = () => {
                                                 cursor: "pointer",
                                                 padding: 2,
                                                 transition: "all 0.5s",
-                                                "&:hover": {
-                                                    scale: 1.05,
-                                                },
                                                 width: "250px",
                                             }}
                                         >
@@ -88,13 +95,23 @@ const Partners = () => {
                                     ))}
                                     <Modal open={open} onClose={handleClose}>
                                         <Box sx={style}>
-                                            <div style={{ display: "flex", justifyContent: "space-between" }}>
-                                                <Typography variant="h6">{collegeName}</Typography>
+                                            <div
+                                                style={{
+                                                    display: "flex",
+                                                    justifyContent: "space-between",
+                                                }}
+                                            >
+                                                <Typography variant="h5">{collegeName}</Typography>
                                                 <CloseIcon
                                                     height={25}
                                                     width={25}
-                                                    style={{
+                                                    sx={{
                                                         cursor: "pointer",
+                                                        "&:hover": {
+                                                            backgroundColor: "white",
+                                                            borderRadius: "10%",
+                                                            color: "black",
+                                                        },
                                                     }}
                                                     onClick={handleClose}
                                                 />
