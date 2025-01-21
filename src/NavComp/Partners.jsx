@@ -151,5 +151,6 @@ const style = {
     border: "2px solid #000",
     boxShadow: 24,
     padding: "8px 8px",
+    // borderRadius: "8px",
 };
 export default Partners;
