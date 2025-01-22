@@ -4,7 +4,6 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import CalculateIcon from "@mui/icons-material/Calculate";
 import WorkIcon from "@mui/icons-material/Work";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
-
 const iconsSize = 70;
 
 const interndata = [

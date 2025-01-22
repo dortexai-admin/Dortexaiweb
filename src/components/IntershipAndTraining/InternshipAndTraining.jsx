@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-    Box,
-    Typography,
-    Button,
-    Grid,
-    List,
-    ListItem,
-    Container,
-    CardMedia,
-} from "@mui/material";
+import { Box, Typography, Button, Grid, List, ListItem, Container, CardMedia } from "@mui/material";
 import Footr from "../Footer/Footer"; // Ensure Footer component is imported correctly
 import Navbar from "../Navbar"; // Ensure Navbar component is imported correctly
 import "./inter.css";
@@ -22,6 +13,7 @@ import digitalImages from "../../../public/digital.jpg";
 import appdevelopmentImages from "../../../public/Mobileapp.jpg";
 import MyCarousel from "../carousel/Carousel";
 import InternComp from "./InternComp";
+import skills from "../../assets/intern.png";
 
 const InternshipAndTraining = () => {
     const [expanded, setExpanded] = useState(false);
@@ -152,12 +144,7 @@ const InternshipAndTraining = () => {
                 }}
                 maxWidth="lg"
             >
-                <Typography
-                    variant="h2"
-                    component="h2"
-                    fontWeight="bold"
-                    sx={{ mb: 4, color: "#12141d" }}
-                >
+                <Typography variant="h2" component="h2" fontWeight="bold" sx={{ mb: 4, color: "#12141d" }}>
                     Internship and Training.
                 </Typography>
 
@@ -167,31 +154,22 @@ const InternshipAndTraining = () => {
                 >
                     Looking For Internship.
                 </Typography>
-                <Typography
-                    variant="h6"
-                    sx={{ color: "#5a5a5a", mb: 4, pb: 3 }}
-                >
+                <Typography variant="h6" sx={{ color: "#5a5a5a", mb: 4, pb: 3 }}>
                     {" "}
                     {/* Added paddingBottom here */}
-                    Kick-Start Your Career with Dortex AI Pvt. Ltd. Are you
-                    ready to embark on an exciting journey that will shape your
-                    future and unlock your potential? If you're seeking a
-                    dynamic environment where you can gain hands-on experience
-                    and grow in your field of interest, look no further. Dortex
-                    AI Pvt. Ltd. is offering exclusive internship opportunities
-                    designed to help you build a solid foundation for your
-                    career and become a future leader in your industry. At
-                    Dortex AI, we believe in empowering talented individuals
-                    like you by providing the resources, mentorship, and
-                    real-world challenges you need to thrive. Our internships
-                    are not just about learning the basics; they are designed to
-                    provide immersive, project-based experiences that allow you
-                    to apply your knowledge, develop new skills, and contribute
-                    to innovative solutions.
+                    Kick-Start Your Career with Dortex AI Pvt. Ltd. Are you ready to embark on an exciting journey that
+                    will shape your future and unlock your potential? If you're seeking a dynamic environment where you
+                    can gain hands-on experience and grow in your field of interest, look no further. Dortex AI Pvt.
+                    Ltd. is offering exclusive internship opportunities designed to help you build a solid foundation
+                    for your career and become a future leader in your industry. At Dortex AI, we believe in empowering
+                    talented individuals like you by providing the resources, mentorship, and real-world challenges you
+                    need to thrive. Our internships are not just about learning the basics; they are designed to provide
+                    immersive, project-based experiences that allow you to apply your knowledge, develop new skills, and
+                    contribute to innovative solutions.
                 </Typography>
 
-                <InternComp/>
-
+                <InternComp />
+                <img src={skills} alt="skills" />
                 <Typography
                     variant="h5"
                     sx={{ mb: 2, color: "#12141d", fontWeight: "bold", pb: 3 }} // Added paddingBottom here
@@ -233,25 +211,21 @@ const InternshipAndTraining = () => {
                                                     left: 0,
                                                     width: "100%",
                                                     height: "100%",
-                                                    bgcolor:
-                                                        "rgba(0, 0, 0, 0.6)",
+                                                    bgcolor: "rgba(0, 0, 0, 0.6)",
                                                     color: "white",
                                                     display: "flex",
                                                     justifyContent: "center",
                                                     alignItems: "center",
                                                     textAlign: "center",
                                                     opacity: 0,
-                                                    transition:
-                                                        "opacity 0.3s ease",
+                                                    transition: "opacity 0.3s ease",
                                                     borderRadius: 2,
                                                 }}
                                             >
                                                 <Button
                                                     variant="contained"
                                                     color="primary"
-                                                    onClick={
-                                                        handleApplyNowClick
-                                                    }
+                                                    onClick={handleApplyNowClick}
                                                 >
                                                     Apply Now
                                                 </Button>
@@ -350,25 +324,21 @@ const InternshipAndTraining = () => {
                                                     left: 0,
                                                     width: "100%",
                                                     height: "100%",
-                                                    bgcolor:
-                                                        "rgba(0, 0, 0, 0.6)",
+                                                    bgcolor: "rgba(0, 0, 0, 0.6)",
                                                     color: "white",
                                                     display: "flex",
                                                     justifyContent: "center",
                                                     alignItems: "center",
                                                     textAlign: "center",
                                                     opacity: 0,
-                                                    transition:
-                                                        "opacity 0.3s ease",
+                                                    transition: "opacity 0.3s ease",
                                                     borderRadius: 2,
                                                 }}
                                             >
                                                 <Button
                                                     variant="contained"
                                                     color="primary"
-                                                    onClick={
-                                                        handleApplyNowClick
-                                                    }
+                                                    onClick={handleApplyNowClick}
                                                 >
                                                     Apply Now
                                                 </Button>
@@ -403,31 +373,23 @@ const InternshipAndTraining = () => {
                         fontSize: 24,
                     }}
                 >
-                    Opportunities are constantly knocking at your door; it’s up
-                    to you to seize them or let them pass by. At DortexAI, we’re
-                    committed to nurturing your growth and offering you the
-                    chance to work with top-tier resources on an international
-                    scale. If you're ready to start a thrilling journey packed
-                    with milestones to achieve and countless memories to create,
-                    then DortexAI is the perfect place for you. Step into your
-                    future with us, and let's reach new heights together!
+                    Opportunities are constantly knocking at your door; it’s up to you to seize them or let them pass
+                    by. At DortexAI, we’re committed to nurturing your growth and offering you the chance to work with
+                    top-tier resources on an international scale. If you're ready to start a thrilling journey packed
+                    with milestones to achieve and countless memories to create, then DortexAI is the perfect place for
+                    you. Step into your future with us, and let's reach new heights together!
                 </Typography>
                 <MyCarousel list={internshipList} />
                 <div className="QR">
                     <p>
                         {" "}
-                        🌟Jumpstart Your Career! 📅 Register now to secure your
-                        spot and take the first step toward success!
+                        🌟Jumpstart Your Career! 📅 Register now to secure your spot and take the first step toward
+                        success!
                     </p>
 
                     <div>
                         <img src="./QR.png" />
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            fontWeight="bold"
-                            onClick={handleApplyNowClick}
-                        >
+                        <Button variant="contained" color="primary" fontWeight="bold" onClick={handleApplyNowClick}>
                             Register Now
                         </Button>
                     </div>

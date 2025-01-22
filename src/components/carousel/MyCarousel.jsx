@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const MyCarousel = ({ images, autoScrollInterval = 2000 }) => {
     const carouselRef = useRef(null);
-    const [carouselItems, setCarouselItems] = useState([...images, images[0]]); // Duplicate the first image at the end
+    const [carouselItems, setCarouselItems] = useState(images);
 
     const scrollAmount = 600; // Reduced scroll amount for slower scrolling
     const totalImages = images.length;

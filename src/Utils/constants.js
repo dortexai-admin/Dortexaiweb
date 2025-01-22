@@ -101,12 +101,12 @@ export const menuItems = [
                         images: ["public/colleges/ct/ct1.jpg", "public/colleges/ct/ct2.jpg", "public/colleges/ct/ct3.jpg", "public/colleges/ct/ct4.jpg"]
                     },
                     {
-                        text: "KIT COLEGE", href: "/partners#kit", logo: "public/colleges/kiet/logo.jpeg",
-                        images: []
+                        text: "KIT COLLEGE", href: "/partners#kit", logo: "public/colleges/kiet/logo.jpeg",
+                        images: ["/public/colleges/kiet/kiet_1.jpg"]
                     },
                     {
-                        text: "BRC COOLEGE", href: "/partners#brc", logo: "public/colleges/brcm/logo.jpeg",
-                        images: []
+                        text: "BRC COLLEGE", href: "/partners#brc", logo: "public/colleges/brcm/logo.jpeg",
+                        images: ["public/colleges/brcm/brcm.jpg", "public/colleges/brcm/brcm1.jpg"]
                     },
                     {
                         text: "CGC COLLEGE", href: "/partners#cgc", logo: "public/colleges/cgc/logo.png",

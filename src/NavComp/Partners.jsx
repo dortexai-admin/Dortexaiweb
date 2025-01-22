@@ -86,7 +86,7 @@ const Partners = () => {
                                                 style={{
                                                     width: "100%",
                                                     borderRadius: "16px",
-                                                    aspectRatio: "16/10",
+                                                    aspectRatio: "1/1",
                                                     objectFit: "contain",
                                                 }}
                                             />
