@@ -97,19 +97,19 @@ export const menuItems = [
                 title: "Colleges",
                 items: [
                     {
-                        text: "CT UNIVERSITY", href: "/partners#ct", logo: "public/colleges/ct/logo.png",
-                        images: ["public/colleges/ct/ct1.jpg", "public/colleges/ct/ct2.jpg", "public/colleges/ct/ct3.jpg", "public/colleges/ct/ct4.jpg"]
+                        text: "CT UNIVERSITY", href: "/partners#ct", logo: "/colleges/ct/logo.png",
+                        images: ["/colleges/ct/ct1.jpg", "/colleges/ct/ct2.jpg", "/colleges/ct/ct3.jpg", "/colleges/ct/ct4.jpg"]
                     },
                     {
-                        text: "KIT COLLEGE", href: "/partners#kit", logo: "public/colleges/kiet/logo.jpeg",
-                        images: ["/public/colleges/kiet/kiet_1.jpg"]
+                        text: "KIT COLLEGE", href: "/partners#kit", logo: "/colleges/kiet/logo.jpeg",
+                        images: ["/colleges/kiet/kiet_1.jpg"]
                     },
                     {
-                        text: "BRC COLLEGE", href: "/partners#brc", logo: "public/colleges/brcm/logo.jpeg",
-                        images: ["public/colleges/brcm/brcm.jpg", "public/colleges/brcm/brcm1.jpg"]
+                        text: "BRC COLLEGE", href: "/partners#brc", logo: "/colleges/brcm/logo.jpeg",
+                        images: ["/colleges/brcm/brcm.jpg", "/colleges/brcm/brcm1.jpg"]
                     },
                     {
-                        text: "CGC COLLEGE", href: "/partners#cgc", logo: "public/colleges/cgc/logo.png",
+                        text: "CGC COLLEGE", href: "/partners#cgc", logo: "/colleges/cgc/logo.png",
                         images: []
                     },
                 ],
