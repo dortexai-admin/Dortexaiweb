@@ -60,12 +60,14 @@ const Services = () => {
                     href="#hire"
                     sx={{
                         display: { xs: "none", md: "inline-flex" },
-                        backgroundColor: "#011255",
+                        // backgroundColor: "#011255",
+                        backgroundColor: "black",
                         color: "white",
                         fontWeight: 600,
                         padding: { xs: "12px 24px", sm: "16px 48px" }, // Adjust padding based on screen size
                         "&:hover": {
-                            backgroundColor: "#533aa7", // Hover color
+                            backgroundColor: "rgb(26, 219, 254)", // Hover color
+                            color: "black",
                         },
                     }}
                     onClick={(e) => {

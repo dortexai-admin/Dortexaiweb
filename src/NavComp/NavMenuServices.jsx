@@ -99,7 +99,7 @@ export const PopupMenu = ({ subMenu }) => {
                     borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
                     // background: "rgba(41, 39, 39, 0.5)",
                     background: "transparent",
-                    // padding: "16px",
+                    padding: "16px",
                     display: "flex",
                     gap: 2,
                 }}
@@ -111,7 +111,7 @@ export const PopupMenu = ({ subMenu }) => {
                             display: "flex",
                             boxShadow: "7px 7px 10px 0px rgba(0, 0, 0)",
                             flexDirection: "column",
-                            gap: 2,
+                            gap: 1,
                             padding: "16px 4px",
                             background: "rgba(17, 16, 16, 0.9)",
                             borderRadius: "20px 20px 20px 20px / 20px 20px 0px 20px",
@@ -135,50 +135,59 @@ export const PopupMenu = ({ subMenu }) => {
                                 gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
                             }}
                         >
-                            {subItem.items.map((item, index) => (
-                                <Typography
-                                    key={index}
-                                    variant="subtitle2"
-                                    component={RouterLink}
-                                    to={`${item.href}?title=${encodeURIComponent(
-                                        subItem.title
-                                    )}&service=${encodeURIComponent(item.text)}`}
-                                    align="left"
-                                    sx={{
-                                        textDecoration: "none",
-                                        textWrap: "balance",
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyItems: "center",
-                                        color: "#ffffff",
-                                        borderRadius: "8px",
-                                        padding: "6px 8px",
-                                        fontSize: "clamp(0.6rem, 1vw, .8rem)",
-                                        "&::before": {
-                                            content: '"◙"',
-                                            color: "white",
-                                            display: "inline-block",
-                                            fontSize: 16,
-                                            paddingInline: 1,
-                                            transition: "color 0.3s ease",
-                                        },
-                                        "&:hover::before": {
-                                            color: "rgb(27, 218, 254)",
-                                            animation: "rotate .8s linear infinite",
-                                        },
-                                        "&:hover": {
-                                            color: "rgb(27, 218, 254)",
-                                            background: "rgba(41, 39, 39, 0.5)",
-                                        },
-                                        "@keyframes rotate": {
-                                            from: { transform: "rotate(0deg)" },
-                                            to: { transform: "rotate(360deg)" },
-                                        },
-                                    }}
-                                >
-                                    {item.text}
-                                </Typography>
-                            ))}
+                            {subItem.items
+                                .map((item) =>
+                                    subItem.title === "Services"
+                                        ? {
+                                              ...item,
+                                              href: `${item.href}?title=${encodeURIComponent(
+                                                  subItem.title
+                                              )}&service=${encodeURIComponent(item.text)}`,
+                                          }
+                                        : item
+                                )
+                                .map((item, index) => (
+                                    <Typography
+                                        key={index}
+                                        variant="subtitle2"
+                                        component={RouterLink}
+                                        to={item.href}
+                                        align="left"
+                                        sx={{
+                                            textDecoration: "none",
+                                            textWrap: "balance",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyItems: "center",
+                                            color: "#ffffff",
+                                            borderRadius: "8px",
+                                            padding: "6px 8px",
+                                            fontSize: "clamp(0.6rem, 1vw, .8rem)",
+                                            "&::before": {
+                                                content: '"◙"',
+                                                color: "white",
+                                                display: "inline-block",
+                                                fontSize: 16,
+                                                paddingInline: 1,
+                                                transition: "color 0.3s ease",
+                                            },
+                                            "&:hover::before": {
+                                                color: "rgb(26, 219, 254)",
+                                                animation: "rotate .8s linear infinite",
+                                            },
+                                            "&:hover": {
+                                                color: "rgb(26, 219, 254)",
+                                                background: "rgba(41, 59, 79, 0.5)",
+                                            },
+                                            "@keyframes rotate": {
+                                                from: { transform: "rotate(0deg)" },
+                                                to: { transform: "rotate(360deg)" },
+                                            },
+                                        }}
+                                    >
+                                        {item.text}
+                                    </Typography>
+                                ))}
                         </Box>
                     </Box>
                 ))}
