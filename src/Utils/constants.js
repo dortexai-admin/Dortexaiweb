@@ -101,15 +101,15 @@ export const menuItems = [
                         images: ["/colleges/ct/ct1.jpg", "/colleges/ct/ct2.jpg", "/colleges/ct/ct3.jpg", "/colleges/ct/ct4.jpg"]
                     },
                     {
-                        text: "KIT COLLEGE", href: "/partners#kit", logo: "/colleges/kiet/logo.jpeg",
+                        text: "KIET COLLEGE", href: "/partners#kit", logo: "/colleges/kiet/logo.jpeg",
                         images: ["/colleges/kiet/kiet_1.jpg"]
                     },
                     {
-                        text: "BRC COLLEGE", href: "/partners#brc", logo: "/colleges/brcm/logo.jpeg",
+                        text: "BRMC COLLEGE", href: "/partners#brc", logo: "/colleges/brcm/logo.jpeg",
                         images: ["/colleges/brcm/brcm.jpg", "/colleges/brcm/brcm1.jpg"]
                     },
                     {
-                        text: "CGC COLLEGE", href: "/partners#cgc", logo: "/colleges/cgc/logo.png",
+                        text: "CGC LANDRAN COLLEGE", href: "/partners#cgc", logo: "/colleges/cgc/logo.png",
                         images: []
                     },
                 ],
