@@ -96,9 +96,9 @@ const MenuTree = [
         label: "Our Partner's",
         children: [
             { id: "3.1", label: "CT UNIVERSITY", href: "/partners#ct" },
-            { id: "3.2", label: "KIT COLEGE", href: "/partners#kit" },
-            { id: "3.3", label: "BRC COOLEGE", href: "/partners#brc" },
-            { id: "3.4", label: "CGC COLLEGE", href: "/partners#cgc" },
+            { id: "3.2", label: "KIET COLLEGE", href: "/partners#kit" },
+            { id: "3.3", label: "BRMC COLLEGE", href: "/partners#brc" },
+            { id: "3.4", label: "CGC LANDRAN COLLEGE", href: "/partners#cgc" },
         ],
     },
     {
